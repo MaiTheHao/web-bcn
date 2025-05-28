@@ -32,10 +32,6 @@ cd "Web BCN"
 ```bash
 # Cài pnpm globally
 npm install -g pnpm
-
-# Hoặc dùng corepack (recommended)
-corepack enable
-corepack prepare pnpm@latest --activate
 ```
 
 ### 3. Install dependencies cho toàn bộ workspace
