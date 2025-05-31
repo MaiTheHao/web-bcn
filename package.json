@@ -26,5 +26,8 @@
 	"workspaces": [
 		"client",
 		"server"
-	]
+	],
+	"dependencies": {
+		"uuid": "^11.1.0"
+	}
 }
