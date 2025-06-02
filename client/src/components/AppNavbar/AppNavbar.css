@@ -1,0 +1,23 @@
+.navbar-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--size-24px);
+}
+
+.navbar-menu li a {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--text-tertiary);
+	padding: 8px 0;
+	transition: color 0.2s ease;
+}
+
+.navbar-menu li a:hover {
+	color: var(--base-palette-cyan-800);
+}
+
+.navbar-menu li a.active {
+	color: var(--base-palette-cyan-800);
+}

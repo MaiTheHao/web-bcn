@@ -1,0 +1,31 @@
+#app-footer {
+	padding: 8px 0;
+}
+
+#app-footer .app-footer__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 var(--size-32px);
+	list-style: none;
+	margin: 0;
+}
+
+#app-footer .app-footer__item {
+	display: flex;
+	align-items: center;
+	font-size: 0.875rem;
+	color: var(--token-onbackground-1);
+}
+
+#app-footer .app-footer__item a {
+	margin-left: 6px;
+	color: var(--token-onbackground-1);
+	text-decoration: none;
+}
+
+#app-footer .app-footer__item svg {
+	margin-right: 6px;
+	font-size: 1rem;
+	color: var(--token-onbackground-1);
+}

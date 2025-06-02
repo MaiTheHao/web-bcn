@@ -1,0 +1,31 @@
+#app-header {
+	padding: var(--size-16px) 0;
+}
+
+#header-block {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	padding: 0 var(--size-32px);
+}
+
+.logo-container {
+	flex: 1 0 auto;
+	display: flex;
+}
+
+.logo {
+	aspect-ratio: 195 / 40;
+}
+
+.global-search-container {
+	flex: 1 0 auto;
+	display: inline-flex;
+	justify-content: flex-end;
+}
+
+/*
+ Chỉnh sửa lại style tinh gọn - clean hơn
+ Thêm class container bao bọc để style chính xác - cấu trúc hơn
+ Căn chỉnh phần tử
+*/
