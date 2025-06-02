@@ -1,0 +1,29 @@
+#app-footer {
+  width: 100%;
+  padding: 8px 0;
+}
+
+#footer-block {
+  width: 100%;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--size-32px);
+  margin: 0;
+  list-style: none;
+}
+
+.footer-title a {
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--token-onbackground-1);
+}
+
+.footer-title svg {
+  margin-right: 6px;
+  font-size: 1rem;
+    color: var(--token-onbackground-1);
+}

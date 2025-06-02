@@ -1,0 +1,25 @@
+#app-header {
+  padding: var(--size-16px) 0;
+  box-sizing: border-box;
+}
+#header-block {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--size-32px);
+  box-sizing: border-box;
+}
+.logo-container {
+  width: 100%;
+  max-width: 324px;
+  min-width: 195px;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.logo {
+  width: 195px;
+  height: auto;
+  object-fit: contain;
+}
