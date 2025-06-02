@@ -1,18 +1,19 @@
 @import './_vars.css';
+@import './reset.css';
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-family);
-    background-color: var(--base-palette-gray-250);
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-family);
+	background-color: var(--base-palette-gray-250);
 }
-.app-container{
-    width: var(--app-container-width);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.app-container {
+	width: var(--app-container-width);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.app-block{
-    max-width: var(--app-block-max-width);
-    width: 100%;
+.app-block {
+	max-width: var(--app-block-max-width);
+	width: 100%;
 }
