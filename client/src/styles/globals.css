@@ -17,3 +17,6 @@ body {
 	max-width: var(--app-block-max-width);
 	width: 100%;
 }
+.app-body {
+	max-width: var(--app-body-max-width);
+}

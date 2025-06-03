@@ -7,6 +7,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<AppLayout />}>
 					{/* Các trang sẽ được gắn vào đây */}
+					<Route path='detail' element={<div>Detail</div>} />
 				</Route>
 				<Route path='*' element={<div>404 Not Found</div>} />
 			</Routes>

@@ -5,13 +5,13 @@ import AppBody from '../../components/AppBody/AppBody';
 
 function AppLayout() {
 	return (
-		<div>
+		<>
 			<AppHeader />
 			<AppBody>
 				<Outlet />
 			</AppBody>
 			<AppFooter />
-		</div>
+		</>
 	);
 }
 

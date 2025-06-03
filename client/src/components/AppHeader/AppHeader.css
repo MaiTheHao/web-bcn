@@ -10,7 +10,7 @@
 }
 
 .logo-container {
-	flex: 1 0 auto;
+	flex: 1;
 	display: flex;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .global-search-container {
-	flex: 1 0 auto;
+	flex: 1;
 	display: inline-flex;
 	justify-content: flex-end;
 }
