@@ -1,60 +1,60 @@
 .project {
-    text-align: center;
+	text-align: center;
 }
 
 .project .title {
-    font-family: 'Quicksand';
-    margin-bottom: 21px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 57px;
-    line-height: 64px;
-    letter-spacing: -0.0025em;
-    color: #757476;
+	font-family: 'Quicksand';
+	margin-bottom: 21px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 57px;
+	line-height: 64px;
+	letter-spacing: -0.0025em;
+	color: #757476;
 }
 
 .project .project-cart {
-    margin: auto;
-    max-width: 1184px;
-    margin-bottom: 103px;
+	margin: auto;
+	max-width: 1184px;
+	margin-bottom: 103px;
 }
 
 .project .project-cart .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	gap: 20px;
 }
 
 .project .project-cart .project-list .project-card {
-    width: calc((100% - 20px) / 2);
-    height: 212px;
-    background-color: white;
+	width: calc((100% - 20px) / 2);
+	height: 212px;
+	background-color: white;
 }
 
 .project .project-cart .pagination {
-    display: flex;
-    gap: 20px;
-    margin-top: 40px;
-    justify-content: center;
-    align-items: end;
+	display: flex;
+	gap: 20px;
+	margin-top: 40px;
+	justify-content: center;
+	align-items: end;
 }
 
 .project .project-cart .pagination-button {
-    height: 24px;
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.001em;
-    color: #616161;
-    background-color: transparent;
-    border: none;
+	height: 24px;
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.001em;
+	color: #616161;
+	background-color: transparent;
+	border: none;
 }
 
-.project .project-cart .pagination-button+.active {
-    font-size: 20px;
-    letter-spacing: 0.001em;
-    color: #00838F;
+.project .project-cart .pagination-button.active {
+	font-size: 20px;
+	letter-spacing: 0.001em;
+	color: #00838f;
 }
