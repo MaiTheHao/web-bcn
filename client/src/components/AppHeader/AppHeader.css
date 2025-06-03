@@ -2,7 +2,7 @@
 	padding: var(--size-16px) 0;
 }
 
-#header-block {
+#app-header-block {
 	margin: 0 auto;
 	display: flex;
 	align-items: center;

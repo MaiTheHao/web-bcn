@@ -6,8 +6,8 @@ import './AppFooter.css';
 
 function AppFooter() {
 	return (
-		<div className='app-container' id='app-footer'>
-			<div className='app-block' id='footer-block'>
+		<footer className='app-container' id='app-footer'>
+			<div className='app-block' id='app-footer-block'>
 				<ul className='app-footer__list'>
 					<li className='app-footer__item'>
 						<FontAwesomeIcon icon={faEnvelope} />
@@ -23,7 +23,7 @@ function AppFooter() {
 					</li>
 				</ul>
 			</div>
-		</div>
+		</footer>
 	);
 }
 

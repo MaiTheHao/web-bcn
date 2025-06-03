@@ -6,8 +6,8 @@ import './AppHeader.css';
 
 function AppHeader() {
 	return (
-		<div className='app-container' id='app-header'>
-			<div className='app-block' id='header-block'>
+		<header className='app-container' id='app-header'>
+			<div className='app-block' id='app-header-block'>
 				<div className='logo-container'>
 					<img src={Logo} alt='Logo' className='logo' />
 				</div>
@@ -16,7 +16,7 @@ function AppHeader() {
 					<Searchbar />
 				</div>
 			</div>
-		</div>
+		</header>
 	);
 }
 
