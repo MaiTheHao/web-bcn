@@ -127,7 +127,7 @@
         --corner-rounded-full: var(--radius-full);
     /* Tooltip */
     --app-block-max-width: 1440px;
-    --app-container-width: 100vw;
+    --app-container-width: 100svw;
     /* Font-family */
     --font-family: 'Quicksand', sans-serif;
 }

@@ -7,6 +7,9 @@ body {
 	font-family: var(--font-family);
 	background-color: var(--base-palette-gray-250);
 }
+::-webkit-scrollbar{
+	display: none;
+}
 .app-container {
 	width: var(--app-container-width);
 	display: flex;
