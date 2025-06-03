@@ -130,5 +130,12 @@
 	--app-container-width: 100vw;
 	--app-body-max-width: 1200px;
 	/* Font-family */
-	--font-family: 'Quicksand', sans-serif;
+	--font-family: 'Quicksand',
+	sans-serif;
+	/* Font Weight */
+	--font-weight-thin: 300;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
 }
