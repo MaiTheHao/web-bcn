@@ -1,0 +1,124 @@
+#project-card {
+    display: flex;
+    width: 582px;
+    height: 212px;
+    border-radius: 15px;
+    border: 1.5px solid black;
+    background-color: #FFFFFF;  
+    overflow: hidden;
+}
+#project-card > img{
+    width: 245px;
+    height: 100%;
+    object-fit: cover;
+}
+#project-card .project-card__content {
+    padding: 16px 15.25px;
+    flex: 1;
+}
+
+#project-card .project-card__content > p {
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.005em;
+    margin: 16px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#project-card .project-card__content-upper {
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+}
+
+#project-card .project-card__content-upper-react {
+    display: flex;
+    gap: 15.42px;
+}
+
+#project-card .project-card__content-upper > h1 {
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    max-width: 200px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#project-card .project-card__content-upper-react > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+#project-card .project-card__content-upper-react > span > img:first-child {
+    width: 13px; 
+    height: 12px;
+}
+
+#project-card .project-card__content-upper-react > span > img:last-child {
+    width: 13px; 
+    height: 12px;
+}
+
+#project-card .project-card__content-tech {
+    display: flex;
+    gap: 10px;
+}
+
+#project-card .project-card__content-tech > img {
+    width: 26px;
+    height: 26px;
+}
+#project-card .project-card__content-footer{
+    width: 100%;
+    height: 16px;
+    margin-top:20px;
+    display: flex;
+    gap:50px;
+}
+#project-card .project-card__content-footer > div{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+#project-card .project-card__content-footer > div> img{
+    width: 14px;
+    height: 16px;
+}
+#project-card .project-card__content-footer > div> p{
+font-family: 'Quicksand';
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.004em;
+}
+#project-card .project-card__content-footer > a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#project-card .project-card__content-footer > a> p{
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.001em;
+    color: #00838F;
+}
+#project-card .project-card__content-footer > a> img{
+    width:14px;
+    height: 16px;
+}
