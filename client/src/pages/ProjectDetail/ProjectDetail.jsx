@@ -1,18 +1,15 @@
-// link: http://localhost:5173/project/1
-
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import projects from "./ProjectDetail.json";
 import "./ProjectDetail.css";
 
-function ProjectDetail() {
+function ProjectDetail({ projects }) {
   const { id } = useParams();
   const [project, setProject] = useState(null);
 
   useEffect(() => {
     const found = projects.find((p) => p.id === id);
     setProject(found);
-  }, [id]);
+  }, [id, projects]);
 
   if (!project) return <div>Loading...</div>;
 
