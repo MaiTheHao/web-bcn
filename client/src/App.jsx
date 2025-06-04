@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
-import ProjectCard from './components/ProjectCard/ProjectCard';
+import ProjectCard from './components/ProjectCard/ProjectCard.jsx';
 
 function App() {
 	return (

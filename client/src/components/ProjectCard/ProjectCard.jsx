@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './ProjectCard.css';
 import starIcon from '../../../public/ShoppingCard/star.png';
 import viewIcon from '../../../public/ShoppingCard/view.png';
@@ -18,7 +17,7 @@ function Projectcard({
         <div id="project-card">
             <img src={thumbnail} alt="image" />
             <div className="project-card__content">
-                {/* upper content */}
+                
                 <div className="project-card__content-upper">
                     <h1>{projectName}</h1>
                     <div className="project-card__content-upper-react">
@@ -32,15 +31,15 @@ function Projectcard({
                         </span>
                     </div>
                 </div>
-                {/* body content */}
+                
                 <p>{projectDes}</p>
-                {/* technology */}
+                
                 <div className="project-card__content-tech">
                     {technologies.map((element, index) => (
                         <img key={index} src={`../../../public/ShoppingCard/${element}.png`} alt="tech" />
                     ))}
                 </div>
-                {/* date and month */}
+                
                 <div className='project-card__content-footer'>
                     <div>
                         <img src="../../../public/ShoppingCard/date.png" alt="" />
