@@ -34,7 +34,8 @@ function Projectcard({
 
 				<div className='project-card__content-tech'>
 					{technologies.map((element, index) => (
-						<img key={index} src={`/ShoppingCard/${element}.png`} alt='tech' />
+						
+						<img key={index} src={`../../../public/ShoppingCard/${element}.png`} alt='tech' />
 					))}
 				</div>
 

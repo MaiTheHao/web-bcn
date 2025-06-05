@@ -13,7 +13,7 @@ function App() {
 					<Route path='/projects' element={<Projects />} />
 					<Route
 						path='/project/:id'
-						element={
+						element={	
 							<div>
 								<ProjectDetail projects={projects} />
 							</div>
