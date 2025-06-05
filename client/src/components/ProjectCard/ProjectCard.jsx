@@ -1,7 +1,6 @@
-import React from 'react';
 import './ProjectCard.css';
-import starIcon from '../../../public/ShoppingCard/star.png';
-import viewIcon from '../../../public/ShoppingCard/view.png';
+import starIcon from '/ShoppingCard/star.png';
+import viewIcon from '/ShoppingCard/view.png';
 
 function Projectcard({
 	thumbnail,
@@ -35,7 +34,7 @@ function Projectcard({
 
 				<div className='project-card__content-tech'>
 					{technologies.map((element, index) => (
-						<img key={index} src={`../../../public/ShoppingCard/${element}.png`} alt='tech' />
+						<img key={index} src={`/ShoppingCard/${element}.png`} alt='tech' />
 					))}
 				</div>
 
