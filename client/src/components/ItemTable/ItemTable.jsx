@@ -50,12 +50,11 @@ function ItemTable({ title = 'Project', projects = [] }) {
 	return (
 		<div className='project'>
 			<h1 className='title'>{title}</h1>
-			<div className='project-cart'>
+			<div className='projects'>
 				<ul className='project-list'>
 					{currentProjects.map((project, index) => (
 					
-					<li className='project-card' key={index}>
-						<Projectcard
+						<Projectcard  key={index}
 							thumbnail={project.thumbnail}
 							projectName={project.projectName}
 							projectDes={project.projectDes}
@@ -65,7 +64,6 @@ function ItemTable({ title = 'Project', projects = [] }) {
 							finishDate={project.finishDate}
 							technologies={project.technologies}
 						/>
-					</li>
 					
 
 				))}
