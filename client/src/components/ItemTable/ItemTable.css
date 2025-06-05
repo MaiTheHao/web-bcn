@@ -27,9 +27,8 @@
 }
 
 .project .project-cart .project-list .project-card {
-	width: calc((100% - 20px) / 2);
-	height: 212px;
-	background-color: white;
+	/* width: calc((100% - 20px) / 2);
+	height: 212px; */
 }
 
 .project .project-cart .pagination {

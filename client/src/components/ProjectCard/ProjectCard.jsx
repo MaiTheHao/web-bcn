@@ -1,3 +1,4 @@
+import { technologiesMapped } from '../../consts/technologiesMapped';
 import './ProjectCard.css';
 import starIcon from '/ShoppingCard/star.png';
 import viewIcon from '/ShoppingCard/view.png';
@@ -34,8 +35,7 @@ function Projectcard({
 
 				<div className='project-card__content-tech'>
 					{technologies.map((element, index) => (
-						
-						<img key={index} src={`../../../public/ShoppingCard/${element}.png`} alt='tech' />
+						<img key={index} src={technologiesMapped[element]} alt='tech' />
 					))}
 				</div>
 
