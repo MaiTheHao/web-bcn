@@ -31,6 +31,9 @@
 	height: 212px;
 	background-color: white;
 }
+.project-card{
+	border-radius: 15px;
+}
 
 .project .project-cart .pagination {
 	display: flex;
