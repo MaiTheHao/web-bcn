@@ -30,6 +30,9 @@
 	/* width: calc((100% - 20px) / 2);
 	height: 212px; */
 }
+.project-card{
+	border-radius: 15px;
+}
 
 .project .project-cart .pagination {
 	display: flex;
