@@ -1,12 +1,12 @@
 [
-  {
-    "id": "1",
-    "projectName": "Online LMS",
-    "mainImage": "/images/main1.png",
-    "sideImages": ["/images/side1a.png", "/images/side1b.png"],
-    "technologies": ["/svg/html.svg", "/svg/css.svg", "/svg/js.svg", "/svg/react.svg"],
-    "duration": "1 tháng",
-    "author": "PHAN LUÂN",
-    "description": "This project aims to create an efficient online learning management platform.We focus on optimizing user experience with a friendly and intuitive interface.The platform is built using modern technologies like ReactJS, NodeJS, and MongoDB.It allows teachers and students to manage lessons, assignments, and learning progress.We prioritize user data security and ensure stable system performance.The interface follows a minimalist design while offering full functionality.A fast search feature helps users quickly find desired content.The project also integrates a notification system and multi-device support.Our development team continuously improves the platform based on user feedback.We aspire to make this project a popular tool for education in the near future."
-    }
+	{
+		"id": "1",
+		"projectName": "Online LMS",
+		"mainImage": "/images/main1.png",
+		"sideImages": ["/images/side1a.png", "/images/side1b.png"],
+		"technologies": ["html", "css", "js", "react"],
+		"duration": "1 tháng",
+		"author": "PHAN LUÂN",
+		"description": "This project aims to create an efficient online learning management platform.We focus on optimizing user experience with a friendly and intuitive interface.The platform is built using modern technologies like ReactJS, NodeJS, and MongoDB.It allows teachers and students to manage lessons, assignments, and learning progress.We prioritize user data security and ensure stable system performance.The interface follows a minimalist design while offering full functionality.A fast search feature helps users quickly find desired content.The project also integrates a notification system and multi-device support.Our development team continuously improves the platform based on user feedback.We aspire to make this project a popular tool for education in the near future."
+	}
 ]

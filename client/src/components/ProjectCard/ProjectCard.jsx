@@ -34,8 +34,8 @@ function Projectcard({
 				<p>{projectDes}</p>
 
 				<div className='project-card__content-tech'>
-					{technologies.map((element, index) => (
-						<img key={index} src={technologiesMapped[element]} alt='tech' />
+					{technologies.map((tech, index) => (
+						<img key={index} src={technologiesMapped?.[tech]} alt='tech' />
 					))}
 				</div>
 
