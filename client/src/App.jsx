@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import Projects from './pages/Projects/Projects';
-import projects from './pages/ProjectDetail/ProjectDetail.json';
+import DataProjectDetail from './pages/ProjectDetail/ProjectDetail.json';
 
 function App() {
 	return (
@@ -15,7 +15,7 @@ function App() {
 						path='/project/:id'
 						element={	
 							<div>
-								<ProjectDetail projects={projects} />
+								<ProjectDetail projects={DataProjectDetail} />
 							</div>
 						}
 					/>
