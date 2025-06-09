@@ -1,7 +1,7 @@
 const baseUrl = '/technologies';
 export const technologiesMapped = {
-	css: `${baseUrl}/css.png`,
-	html: `${baseUrl}/html.png`,
-	js: `${baseUrl}/js.png`,
-	react: `${baseUrl}/react.png`,
+	css: `${baseUrl}/css.svg`,
+	html: `${baseUrl}/html.svg`,
+	js: `${baseUrl}/js.svg`,
+	react: `${baseUrl}/react.svg`,
 };
