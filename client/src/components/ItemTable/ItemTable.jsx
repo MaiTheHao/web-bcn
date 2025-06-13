@@ -10,6 +10,9 @@ const LIMIT = 8;
 function ItemTable({ title = 'Project', projects = [] }) {
 	const [page, setPage] = useState(1);
 
+	// Dựa theo tổng số lượng project cards và số lượng project cards cần trên mỗi trang -> tính toán phân trang 
+	// -> trả về object chứ index trang hiện tại, ... , tổng số trang 
+
 	const pagination = useMemo(() => calcPagination(page, LIMIT, projects.length), [page, projects.length]);
 
 	const handleChangePage = (newPage) => {

@@ -8,7 +8,24 @@
 		"numberView": 1250,
 		"startDate": "01/2024",
 		"finishDate": "03/2024",
-		"technologies": ["react", "nodejs", "mongodb"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 2,
@@ -19,73 +36,192 @@
 		"numberView": 890,
 		"startDate": "02/2024",
 		"finishDate": "04/2024",
-		"technologies": ["vue", "firebase", "typescript"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 3,
-		"thumbnail": "https://th.bing.com/th/id/OIP.4b9wQn8n6n6v1v8QwQwQwQHaEK?pid=ImgDet&rs=1",
+		"thumbnail": "https://th.bing.com/th/id/R.875e868941ea818debe3dd074574ca0d?rik=hzJcaaTFi%2fPg%2fg&pid=ImgRaw&r=0",
 		"projectName": "Personal Portfolio",
 		"projectDes": "A responsive personal portfolio website to showcase projects, skills, and contact information.",
 		"numberStar": 35,
 		"numberView": 1100,
 		"startDate": "03/2024",
 		"finishDate": "04/2024",
-		"technologies": ["nextjs", "tailwindcss", "vercel"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 4,
-		"thumbnail": "https://th.bing.com/th/id/OIP.8d8d8d8d8d8d8d8d8d8d8dHaEK?pid=ImgDet&rs=1",
+		"thumbnail": "https://tse3.mm.bing.net/th/id/OIP.cGnPlLdjL7kwWbi7aqctwAHaFj?r=0&rs=1&pid=ImgDetMain",
 		"projectName": "Blog Platform",
 		"projectDes": "A full-featured blog platform with markdown support, comments, and user profiles.",
 		"numberStar": 22,
 		"numberView": 700,
 		"startDate": "01/2024",
 		"finishDate": "02/2024",
-		"technologies": ["django", "postgresql", "bootstrap"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 5,
-		"thumbnail": "https://th.bing.com/th/id/OIP.9d9d9d9d9d9d9d9d9d9d9dHaEK?pid=ImgDet&rs=1",
+		"thumbnail": "https://th.bing.com/th/id/R.875e868941ea818debe3dd074574ca0d?rik=hzJcaaTFi%2fPg%2fg&pid=ImgRaw&r=0",
 		"projectName": "Weather Dashboard",
 		"projectDes": "A weather dashboard providing real-time weather data and forecasts for multiple cities.",
 		"numberStar": 18,
 		"numberView": 650,
 		"startDate": "02/2024",
 		"finishDate": "03/2024",
-		"technologies": ["angular", "rxjs", "openweathermap"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 6,
-		"thumbnail": "https://th.bing.com/th/id/OIP.7d7d7d7d7d7d7d7d7d7d7dHaEK?pid=ImgDet&rs=1",
+		"thumbnail": "https://tse3.mm.bing.net/th/id/OIP.cGnPlLdjL7kwWbi7aqctwAHaFj?r=0&rs=1&pid=ImgDetMain",
 		"projectName": "Recipe Finder",
 		"projectDes": "A recipe finder app that allows users to search and save their favorite recipes.",
 		"numberStar": 25,
 		"numberView": 800,
 		"startDate": "03/2024",
 		"finishDate": "04/2024",
-		"technologies": ["react", "redux", "api"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 7,
-		"thumbnail": "https://th.bing.com/th/id/OIP.6d6d6d6d6d6d6d6d6d6d6dHaEK?pid=ImgDet&rs=1",
+		"thumbnail":"https://th.bing.com/th/id/R.875e868941ea818debe3dd074574ca0d?rik=hzJcaaTFi%2fPg%2fg&pid=ImgRaw&r=0",
 		"projectName": "Fitness Tracker",
 		"projectDes": "A fitness tracking app with workout logging, progress charts, and goal setting.",
 		"numberStar": 30,
 		"numberView": 950,
 		"startDate": "01/2024",
 		"finishDate": "03/2024",
-		"technologies": ["flutter", "firebase", "dart"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 8,
-		"thumbnail": "https://th.bing.com/th/id/OIP.5d5d5d5d5d5d5d5d5d5d5dHaEK?pid=ImgDet&rs=1",
+		"thumbnail": "https://tse3.mm.bing.net/th/id/OIP.cGnPlLdjL7kwWbi7aqctwAHaFj?r=0&rs=1&pid=ImgDetMain",
 		"projectName": "Online Learning Platform",
 		"projectDes": "A platform for online courses with video streaming, quizzes, and certification.",
 		"numberStar": 40,
 		"numberView": 1200,
 		"startDate": "02/2024",
 		"finishDate": "05/2024",
-		"technologies": ["laravel", "vue", "mysql"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 9,
@@ -96,7 +232,24 @@
 		"numberView": 780,
 		"startDate": "03/2024",
 		"finishDate": "04/2024",
-		"technologies": ["nodejs", "socket.io", "react"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 10,
@@ -107,7 +260,24 @@
 		"numberView": 600,
 		"startDate": "01/2024",
 		"finishDate": "02/2024",
-		"technologies": ["react", "express", "sqlite"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 11,
@@ -118,7 +288,24 @@
 		"numberView": 980,
 		"startDate": "02/2024",
 		"finishDate": "04/2024",
-		"technologies": ["django", "react", "stripe"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 12,
@@ -129,7 +316,24 @@
 		"numberView": 720,
 		"startDate": "01/2024",
 		"finishDate": "03/2024",
-		"technologies": ["angular", "nodejs", "mongodb"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 13,
@@ -140,7 +344,24 @@
 		"numberView": 800,
 		"startDate": "03/2024",
 		"finishDate": "04/2024",
-		"technologies": ["gatsby", "graphql", "contentful"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	},
 	{
 		"id": 14,
@@ -151,6 +372,23 @@
 		"numberView": 1300,
 		"startDate": "02/2024",
 		"finishDate": "05/2024",
-		"technologies": ["react", "nodejs", "aws"]
+		"technologies": [
+            {
+                "id": 1,
+                "name": "html"
+            },
+            {
+                "id": 2,
+                "name": "css"
+            },
+            {
+                "id": 3,
+                "name": "js"
+            },
+            {
+                "id": 4,
+                "name": "react"
+            }
+        ]
 	}
 ]

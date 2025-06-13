@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import Projects from './pages/Projects/Projects';
+import Members from './pages/Members/Members';
 import DataProjectDetail from '../mock_datas/project_detail_page_mock_data.json';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 							</div>
 						}
 					/>
+					<Route path='/members' element={<Members />} />
 					<Route path='*' element={<div>404 Not Found</div>} />
 				</Route>
 			</Routes>
