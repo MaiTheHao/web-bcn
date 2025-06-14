@@ -47,6 +47,7 @@ function ItemTable({ title = 'Project', items = [], itemsPerRow = 4, rowsPerPage
 	return (
 		<div className='item'>
 			<h1 className='title'>{title}</h1>
+<<<<<<< HEAD
 			<div className='item-cart'>
 				<ul className='item-list' style={{ display: 'flex', flexWrap: 'wrap' }}>
 					{currentItems.map((item, index) => (
@@ -58,6 +59,25 @@ function ItemTable({ title = 'Project', items = [], itemsPerRow = 4, rowsPerPage
 							{item}
 						</li>
 					))}
+=======
+			<div className='projects'>
+				<ul className='project-list'>
+					{currentProjects.map((project, index) => (
+					
+						<Projectcard  key={index}
+							thumbnail={project.thumbnail}
+							projectName={project.projectName}
+							projectDes={project.projectDes}
+							numberStar={project.numberStar}
+							numberView={project.numberView}
+							startDate={project.startDate}
+							finishDate={project.finishDate}
+							technologies={project.technologies}
+						/>
+					
+
+				))}
+>>>>>>> 6e10b0cba703ca62dccf4b092459ea9b6d5187a9
 				</ul>
 				{pagination.totalPage > 1 && (
 					<div className='pagination'>
