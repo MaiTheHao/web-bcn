@@ -1,8 +1,8 @@
-.project {
+.item {
 	text-align: center;
 }
 
-.project .title {
+.item .title {
 	font-family: 'Quicksand';
 	margin-bottom: 21px;
 	font-style: normal;
@@ -13,28 +13,24 @@
 	color: #757476;
 }
 
-.project .project-cart {
+.item .item-cart {
 	margin: auto;
 	max-width: 1184px;
 	margin-bottom: 103px;
 }
 
-.project .project-cart .project-list {
+.item .item-cart .item-list {
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
 	gap: 20px;
 }
 
-.project .project-cart .project-list .project-card {
-	/* width: calc((100% - 20px) / 2);
-	height: 212px; */
-}
-.project-card{
+.item-card{
 	border-radius: 15px;
 }
 
-.project .project-cart .pagination {
+.item .item-cart .pagination {
 	display: flex;
 	gap: 20px;
 	margin-top: 40px;
@@ -42,7 +38,7 @@
 	align-items: end;
 }
 
-.project .project-cart .pagination-button {
+.item .item-cart .pagination-button {
 	height: 24px;
 	font-family: 'Quicksand';
 	font-style: normal;
@@ -55,7 +51,7 @@
 	border: none;
 }
 
-.project .project-cart .pagination-button.active {
+.item .item-cart .pagination-button.active {
 	font-size: 20px;
 	letter-spacing: 0.001em;
 	color: #00838f;

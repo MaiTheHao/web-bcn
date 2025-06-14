@@ -1,4 +1,3 @@
-import React from "react";
 import membersData from "../../../mock_datas/member_page_mock_date.json";
 import './MemberCard.css';
 import StarIcon from '../../../public/star/star.png';
