@@ -46,25 +46,29 @@ function ItemTable({ title = 'Project', projects = [] }) {
 
 	const pageNumbers = getPageNumbers();
 
+
 	return (
 		<div className='project'>
 			<h1 className='title'>{title}</h1>
 			<div className='project-cart'>
 				<ul className='project-list'>
-					{currentProjects.map((project) => (
-						<li className='project-card' key={project.id}>
-							<Projectcard
-								thumbnail={project.thumbnail}
-								projectName={project.projectName}
-								projectDes={project.projectDes}
-								numberStar={project.numberStar}
-								numberView={project.numberView}
-								startDate={project.startDate}
-								finishDate={project.finishDate}
-								technologies={project.technologies}
-							/>
-						</li>
-					))}
+					{currentProjects.map((project, index) => (
+					
+					<li className='project-card' key={index}>
+						<Projectcard
+							thumbnail={project.thumbnail}
+							projectName={project.projectName}
+							projectDes={project.projectDes}
+							numberStar={project.numberStar}
+							numberView={project.numberView}
+							startDate={project.startDate}
+							finishDate={project.finishDate}
+							technologies={project.technologies}
+						/>
+					</li>
+					
+
+				))}
 				</ul>
 				{pagination.totalPage > 1 && (
 					<div className='pagination'>

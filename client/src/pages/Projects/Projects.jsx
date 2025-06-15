@@ -11,7 +11,7 @@ const sampleProjects = [
 		numberView: 1250,
 		startDate: '01/2024',
 		finishDate: '03/2024',
-		technologies: ['react', 'nodejs', 'mongodb'],
+		technologies: ['html', 'css', 'js'],
 	},
 	{
 		id: 2,
@@ -23,7 +23,7 @@ const sampleProjects = [
 		numberView: 890,
 		startDate: '02/2024',
 		finishDate: '04/2024',
-		technologies: ['vue', 'firebase', 'typescript'],
+		technologies: ['html', 'css', 'js'],
 	},
 	{
 		id: 1,
@@ -35,7 +35,7 @@ const sampleProjects = [
 		numberView: 1250,
 		startDate: '01/2024',
 		finishDate: '03/2024',
-		technologies: ['react', 'nodejs', 'mongodb'],
+		technologies: ['css', 'html', 'js'],
 	},
 	{
 		id: 2,
@@ -47,7 +47,7 @@ const sampleProjects = [
 		numberView: 890,
 		startDate: '02/2024',
 		finishDate: '04/2024',
-		technologies: ['vue', 'firebase', 'typescript'],
+		technologies: ['react', 'html', 'css'],
 	},
 	{
 		id: 1,
@@ -59,7 +59,7 @@ const sampleProjects = [
 		numberView: 1250,
 		startDate: '01/2024',
 		finishDate: '03/2024',
-		technologies: ['react', 'nodejs', 'mongodb'],
+		technologies: ['html', 'css', 'mongodb'],
 	},
 	{
 		id: 2,
