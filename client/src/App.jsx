@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import Projects from './pages/Projects/Projects';
+import MemberDetail from './pages/MemberDetail/MemberDetail';
 import projects from './pages/ProjectDetail/ProjectDetail.json';
 
 function App() {
@@ -16,6 +17,14 @@ function App() {
 						element={
 							<div>
 								<ProjectDetail projects={projects} />
+							</div>
+						}
+					/>
+					<Route
+						path='/member/:id'
+						element={
+							<div>
+								<MemberDetail />
 							</div>
 						}
 					/>
