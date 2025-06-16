@@ -5,6 +5,9 @@ import Projects from './pages/Projects/Projects';
 import Members from './pages/Members/Members';
 import DataProjectDetail from '../mock_datas/project_detail_page_mock_data.json';
 // xnxx
+import MemberDetail from './pages/MemberDetail/MemberDetail';
+import projects from './pages/ProjectDetail/ProjectDetail.json';
+
 function App() {
 	return (
 		<BrowserRouter>
@@ -15,8 +18,17 @@ function App() {
 					<Route
 						path='/project/:id'
 						element={
+						element={
 							<div>
-								<ProjectDetail projects={DataProjectDetail} />
+								<ProjectDetail projects={projects} />
+							</div>
+						}
+					/>
+					<Route
+						path='/member/:id'
+						element={
+							<div>
+								<MemberDetail />
 							</div>
 						}
 					/>
