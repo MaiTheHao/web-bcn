@@ -1,7 +1,9 @@
 import { technologiesMapped } from '../../consts/technologiesMapped';
 import './ProjectCard.css';
-import starIcon from '/ShoppingCard/star.png';
-import viewIcon from '/ShoppingCard/view.png';
+import starIcon from '/star/star.png';
+import viewIcon from '/view/view.png';
+
+// NOTE: TECHNOLOGIES PHẢI THÊM ID ĐỂ ĐÁNH INDEX KHI RENDER RA 
 
 function Projectcard({
 	thumbnail,
@@ -34,8 +36,8 @@ function Projectcard({
 				<p>{projectDes}</p>
 
 				<div className='project-card__content-tech'>
-					{technologies.map((tech, index) => (
-						<img key={index} src={technologiesMapped?.[tech]} alt='tech' />
+					{technologies.map((tech) => (
+						<img key={tech.id} src={technologiesMapped?.[tech.name]} alt='tech' />
 					))}
 				</div>
 
@@ -48,7 +50,7 @@ function Projectcard({
 					</div>
 					<a href='#'>
 						<p>MORE</p>
-						<img src='/ShoppingCard/moreButton.png' alt='' />
+						<img src='/MoreButton/moreButton.png' alt='' />
 					</a>
 				</div>
 			</div>

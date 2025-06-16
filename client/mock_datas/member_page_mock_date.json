@@ -1,0 +1,410 @@
+[
+    {
+        "id": 1,
+        "avt": "./public/Members/phanhoangluan.png",
+        "role": "MEMBER",
+        "name": "Phan Luân",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 2,
+        "avt": "./public/Members/nguyenminhvu.png",
+        "role": "MEMBER",
+        "name": "Nguyễn Minh Vũ",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 3,
+        "avt": "./public/Members/dangthihonganh.png",
+        "role": "MEMBER",
+        "name": "Đăng Thị Hồng Anh",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 4,
+        "avt": "./public/Members/nguyentrunghau.png",
+        "role": "MEMBER",
+        "name": "Nguyễn Trung Hậu",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 5,
+        "avt": "./public/Members/student5.png",
+        "role": "MEMBER",
+        "name": "Trần Văn Nam",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 6,
+        "avt": "./public/Members/student6.png",
+        "role": "MEMBER",
+        "name": "Lê Thị Mai",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 7,
+        "avt": "./public/Members/student7.png",
+        "role": "MEMBER",
+        "name": "Ngô Minh Tuấn",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 8,
+        "avt": "./public/Members/student8.png",
+        "role": "MEMBER",
+        "name": "Phạm Thị Hạnh",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 9,
+        "avt": "./public/Members/student9.png",
+        "role": "MEMBER",
+        "name": "Đỗ Văn Hùng",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 10,
+        "avt": "./public/Members/student10.png",
+        "role": "MEMBER",
+        "name": "Vũ Thị Lan",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 11,
+        "avt": "./public/Members/student11.png",
+        "role": "MEMBER",
+        "name": "Nguyễn Văn Bình",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 12,
+        "avt": "./public/Members/student12.png",
+        "role": "MEMBER",
+        "name": "Trần Thị Thu",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 13,
+        "avt": "./public/Members/student13.png",
+        "role": "MEMBER",
+        "name": "Lê Văn Dũng",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 14,
+        "avt": "./public/Members/student14.png",
+        "role": "MEMBER",
+        "name": "Phạm Thị Hoa",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 15,
+        "avt": "./public/Members/student15.png",
+        "role": "MEMBER",
+        "name": "Ngô Văn Quang",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 16,
+        "avt": "./public/Members/student16.png",
+        "role": "MEMBER",
+        "name": "Đặng Thị Hương",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 17,
+        "avt": "./public/Members/student17.png",
+        "role": "MEMBER",
+        "name": "Vũ Văn Sơn",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 18,
+        "avt": "./public/Members/student18.png",
+        "role": "MEMBER",
+        "name": "Trần Thị Kim",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 19,
+        "avt": "./public/Members/student19.png",
+        "role": "MEMBER",
+        "name": "Nguyễn Văn Phúc",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 20,
+        "avt": "./public/Members/student20.png",
+        "role": "MEMBER",
+        "name": "Lê Thị Ngọc",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 21,
+        "avt": "./public/Members/student21.png",
+        "role": "MEMBER",
+        "name": "Phạm Văn Toàn",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 22,
+        "avt": "./public/Members/student22.png",
+        "role": "MEMBER",
+        "name": "Ngô Thị Hòa",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 23,
+        "avt": "./public/Members/student23.png",
+        "role": "MEMBER",
+        "name": "Đặng Văn Lâm",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    },
+    {
+        "id": 24,
+        "avt": "./public/Members/student24.png",
+        "role": "MEMBER",
+        "name": "Trần Thị Hằng",
+        "job": "Mobile App Developer",
+        "status": "Sinh viên năm nhất",
+        "star": 999,
+        "view": 999,
+        "projects": 999,
+        "technologies": [
+            { "id": 1, "name": "html" },
+            { "id": 2, "name": "css" },
+            { "id": 3, "name": "js" },
+            { "id": 4, "name": "react" }
+        ]
+    }
+]

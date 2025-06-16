@@ -1,8 +1,9 @@
-.project {
+.item {
 	text-align: center;
+	max-width: var(--app-body-max-width);
 }
 
-.project .title {
+.item .title {
 	font-family: 'Quicksand';
 	margin-bottom: 21px;
 	font-style: normal;
@@ -13,25 +14,35 @@
 	color: #757476;
 }
 
-.project .project-cart {
+<<<<<<< HEAD
+.item .item-cart {
+=======
+.project .projects {
+>>>>>>> 6e10b0cba703ca62dccf4b092459ea9b6d5187a9
 	margin: auto;
-	max-width: 1184px;
 	margin-bottom: 103px;
 }
 
-.project .project-cart .project-list {
+<<<<<<< HEAD
+.item .item-cart .item-list {
+=======
+.project .projects .project-list {
+>>>>>>> 6e10b0cba703ca62dccf4b092459ea9b6d5187a9
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
 	gap: 20px;
 }
 
-.project .project-cart .project-list .project-card {
-	/* width: calc((100% - 20px) / 2);
-	height: 212px; */
+<<<<<<< HEAD
+.item-card{
+	border-radius: 15px;
 }
 
-.project .project-cart .pagination {
+.item .item-cart .pagination {
+=======
+.project .projects .pagination {
+>>>>>>> 6e10b0cba703ca62dccf4b092459ea9b6d5187a9
 	display: flex;
 	gap: 20px;
 	margin-top: 40px;
@@ -39,7 +50,11 @@
 	align-items: end;
 }
 
-.project .project-cart .pagination-button {
+<<<<<<< HEAD
+.item .item-cart .pagination-button {
+=======
+.project .projects .pagination-button {
+>>>>>>> 6e10b0cba703ca62dccf4b092459ea9b6d5187a9
 	height: 24px;
 	font-family: 'Quicksand';
 	font-style: normal;
@@ -52,7 +67,11 @@
 	border: none;
 }
 
-.project .project-cart .pagination-button.active {
+<<<<<<< HEAD
+.item .item-cart .pagination-button.active {
+=======
+.project .projects .pagination-button.active {
+>>>>>>> 6e10b0cba703ca62dccf4b092459ea9b6d5187a9
 	font-size: 20px;
 	letter-spacing: 0.001em;
 	color: #00838f;
