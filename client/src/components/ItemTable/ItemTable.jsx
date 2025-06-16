@@ -4,7 +4,7 @@ import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import { useState, useMemo } from 'react';
 import { calcPagination } from '../../styles/utils/getPagination';
 
-function ItemTable({ title = 'Project', items = [], itemsPerRow = 4, rowsPerPage = 2 }) {
+function ItemTable({ title = 'Project', items = [], itemsPerRow = 2, rowsPerPage = 2 }) {
 	const LIMIT = itemsPerRow * rowsPerPage;
 	const [page, setPage] = useState(1);
 
@@ -45,47 +45,19 @@ function ItemTable({ title = 'Project', items = [], itemsPerRow = 4, rowsPerPage
 	const pageNumbers = getPageNumbers();
 
 	return (
-		<div className='item'>
-			<h1 className='title'>{title}</h1>
-<<<<<<< HEAD
-			<div className='item-cart'>
-				<ul className='item-list' style={{ display: 'flex', flexWrap: 'wrap' }}>
+		<div className='item-table'>
+			<h1 className='item-table__title'>{title}</h1>
+			<div className='item-table__body'>
+				<ul className='item-table__list'>
 					{currentItems.map((item, index) => (
-						<li
-							className='item-card'
-							key={index}
-							style={{ width: `calc(${100 / itemsPerRow}% - 20px)` }}
-						>
+						<li className='item-table__list-item' key={index} style={{ flex: `1 0 calc((100% - 20px * ${itemsPerRow - 1}) / ${itemsPerRow})` }}>
 							{item}
 						</li>
 					))}
-=======
-			<div className='projects'>
-				<ul className='project-list'>
-					{currentProjects.map((project, index) => (
-					
-						<Projectcard  key={index}
-							thumbnail={project.thumbnail}
-							projectName={project.projectName}
-							projectDes={project.projectDes}
-							numberStar={project.numberStar}
-							numberView={project.numberView}
-							startDate={project.startDate}
-							finishDate={project.finishDate}
-							technologies={project.technologies}
-						/>
-					
-
-				))}
->>>>>>> 6e10b0cba703ca62dccf4b092459ea9b6d5187a9
 				</ul>
 				{pagination.totalPage > 1 && (
 					<div className='pagination'>
-						<button
-							className='pagination-button pagination-button-prev'
-							onClick={handlePrevPage}
-							disabled={page === 1}
-						>
+						<button className='pagination-button pagination-button-prev' onClick={handlePrevPage} disabled={page === 1}>
 							<FontAwesomeIcon icon={faAnglesLeft} />
 						</button>
 						{pageNumbers.map((p, idx) =>
@@ -94,20 +66,12 @@ function ItemTable({ title = 'Project', items = [], itemsPerRow = 4, rowsPerPage
 									...
 								</span>
 							) : (
-								<button
-									key={p}
-									className={`pagination-button pagination-number ${isActivePage(p)}`}
-									onClick={() => handleChangePage(p)}
-								>
+								<button key={p} className={`pagination-button pagination-number ${isActivePage(p)}`} onClick={() => handleChangePage(p)}>
 									{p}
 								</button>
 							)
 						)}
-						<button
-							className='pagination-button pagination-button-next'
-							onClick={handleNextPage}
-							disabled={page === pagination.totalPage}
-						>
+						<button className='pagination-button pagination-button-next' onClick={handleNextPage} disabled={page === pagination.totalPage}>
 							<FontAwesomeIcon icon={faAnglesRight} />
 						</button>
 					</div>

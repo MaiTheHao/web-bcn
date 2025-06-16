@@ -1,0 +1,242 @@
+[
+	{
+		"_id": "60d0fe4f5311236168a109d0",
+		"name": "Trang web thương mại điện tử",
+		"slug": "e-commerce-website",
+		"description": "Nền tảng thương mại điện tử hiện đại xây dựng bằng React và Node.js với xác thực người dùng, tích hợp thanh toán và bảng điều khiển quản trị.",
+		"thumbnail": "https://th.bing.com/th/id/R.875e868941ea818debe3dd074574ca0d?rik=hzJcaaTFi%2fPg%2fg&pid=ImgRaw&r=0",
+		"dates": {
+			"start": "01/2024",
+			"finish": "03/2024"
+		},
+		"statistics": {
+			"stars": 42,
+			"views": 1250
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/ecommerce-website",
+			"demo": "https://ecommerce-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109ca", "60d0fe4f5311236168a109ce"],
+		"status": "hoàn thành",
+		"created_at": "2024-01-01T00:00:00Z",
+		"updated_at": "2024-03-15T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d1",
+		"name": "Ứng dụng quản lý công việc",
+		"slug": "task-management-app",
+		"description": "Ứng dụng quản lý công việc cộng tác với cập nhật thời gian thực, kéo thả và các tính năng làm việc nhóm.",
+		"thumbnail": "https://tse3.mm.bing.net/th/id/OIP.cGnPlLdjL7kwWbi7aqctwAHaFj?r=0&rs=1&pid=ImgDetMain",
+		"dates": {
+			"start": "02/2024",
+			"finish": "04/2024"
+		},
+		"statistics": {
+			"stars": 28,
+			"views": 890
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/task-manager",
+			"demo": "https://tasks-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109cb"],
+		"status": "đang thực hiện",
+		"created_at": "2024-02-01T00:00:00Z",
+		"updated_at": "2024-03-20T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d2",
+		"name": "Portfolio cá nhân",
+		"slug": "personal-portfolio",
+		"description": "Trang web portfolio cá nhân đáp ứng để giới thiệu dự án, kỹ năng và thông tin liên hệ.",
+		"thumbnail": "https://th.bing.com/th/id/R.875e868941ea818debe3dd074574ca0d?rik=hzJcaaTFi%2fPg%2fg&pid=ImgRaw&r=0",
+		"dates": {
+			"start": "03/2024",
+			"finish": "04/2024"
+		},
+		"statistics": {
+			"stars": 35,
+			"views": 1100
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/portfolio-template",
+			"demo": "https://portfolio-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109ca"],
+		"status": "đang thực hiện",
+		"created_at": "2024-03-01T00:00:00Z",
+		"updated_at": "2024-03-25T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d3",
+		"name": "Nền tảng blog",
+		"slug": "blog-platform",
+		"description": "Nền tảng blog đầy đủ tính năng với hỗ trợ markdown, bình luận và hồ sơ người dùng.",
+		"thumbnail": "https://tse3.mm.bing.net/th/id/OIP.cGnPlLdjL7kwWbi7aqctwAHaFj?r=0&rs=1&pid=ImgDetMain",
+		"dates": {
+			"start": "01/2024",
+			"finish": "02/2024"
+		},
+		"statistics": {
+			"stars": 22,
+			"views": 700
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/blog-system",
+			"demo": "https://blog-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109cc"],
+		"status": "hoàn thành",
+		"created_at": "2024-01-05T00:00:00Z",
+		"updated_at": "2024-02-28T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d4",
+		"name": "Bảng điều khiển thời tiết",
+		"slug": "weather-dashboard",
+		"description": "Bảng điều khiển thời tiết cung cấp dữ liệu thời tiết thực tế và dự báo cho nhiều thành phố.",
+		"thumbnail": "https://th.bing.com/th/id/R.875e868941ea818debe3dd074574ca0d?rik=hzJcaaTFi%2fPg%2fg&pid=ImgRaw&r=0",
+		"dates": {
+			"start": "02/2024",
+			"finish": "03/2024"
+		},
+		"statistics": {
+			"stars": 18,
+			"views": 650
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/weather-app",
+			"demo": "https://weather-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109ca"],
+		"status": "hoàn thành",
+		"created_at": "2024-02-05T00:00:00Z",
+		"updated_at": "2024-03-10T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d5",
+		"name": "Tìm kiếm công thức nấu ăn",
+		"slug": "recipe-finder",
+		"description": "Ứng dụng tìm kiếm công thức cho phép người dùng tìm kiếm và lưu lại các công thức yêu thích.",
+		"thumbnail": "https://tse3.mm.bing.net/th/id/OIP.cGnPlLdjL7kwWbi7aqctwAHaFj?r=0&rs=1&pid=ImgDetMain",
+		"dates": {
+			"start": "03/2024",
+			"finish": "04/2024"
+		},
+		"statistics": {
+			"stars": 25,
+			"views": 800
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/recipe-finder",
+			"demo": "https://recipes-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109cb"],
+		"status": "đang thực hiện",
+		"created_at": "2024-03-01T00:00:00Z",
+		"updated_at": "2024-03-30T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d6",
+		"name": "Theo dõi thể dục",
+		"slug": "fitness-tracker",
+		"description": "Ứng dụng theo dõi thể dục với ghi nhật ký tập luyện, biểu đồ tiến trình và đặt mục tiêu.",
+		"thumbnail": "https://th.bing.com/th/id/R.875e868941ea818debe3dd074574ca0d?rik=hzJcaaTFi%2fPg%2fg&pid=ImgRaw&r=0",
+		"dates": {
+			"start": "01/2024",
+			"finish": "03/2024"
+		},
+		"statistics": {
+			"stars": 30,
+			"views": 950
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/fitness-app",
+			"demo": "https://fitness-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109cc"],
+		"status": "hoàn thành",
+		"created_at": "2024-01-15T00:00:00Z",
+		"updated_at": "2024-03-20T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d7",
+		"name": "Nền tảng học trực tuyến",
+		"slug": "online-learning-platform",
+		"description": "Nền tảng khóa học trực tuyến với phát video, bài kiểm tra và cấp chứng chỉ.",
+		"thumbnail": "https://tse3.mm.bing.net/th/id/OIP.cGnPlLdjL7kwWbi7aqctwAHaFj?r=0&rs=1&pid=ImgDetMain",
+		"dates": {
+			"start": "02/2024",
+			"finish": "05/2024"
+		},
+		"statistics": {
+			"stars": 40,
+			"views": 1200
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/e-learning",
+			"demo": "https://learning-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109cb"],
+		"status": "đang thực hiện",
+		"created_at": "2024-02-10T00:00:00Z",
+		"updated_at": "2024-04-05T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d8",
+		"name": "Ứng dụng trò chuyện",
+		"slug": "chat-application",
+		"description": "Ứng dụng trò chuyện thời gian thực với chat nhóm, emoji và thông báo.",
+		"thumbnail": "https://th.bing.com/th/id/OIP.4d4d4d4d4d4d4d4d4d4d4dHaEK?pid=ImgDet&rs=1",
+		"dates": {
+			"start": "03/2024",
+			"finish": "04/2024"
+		},
+		"statistics": {
+			"stars": 27,
+			"views": 780
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/chat-app",
+			"demo": "https://chat-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109cc"],
+		"status": "đang thực hiện",
+		"created_at": "2024-03-05T00:00:00Z",
+		"updated_at": "2024-03-25T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d9",
+		"name": "Theo dõi chi tiêu",
+		"slug": "expense-tracker",
+		"description": "Ứng dụng theo dõi chi tiêu đơn giản để quản lý tài chính cá nhân và tạo báo cáo.",
+		"thumbnail": "https://th.bing.com/th/id/OIP.3d3d3d3d3d3d3d3d3d3d3dHaEK?pid=ImgDet&rs=1",
+		"dates": {
+			"start": "01/2024",
+			"finish": "02/2024"
+		},
+		"statistics": {
+			"stars": 19,
+			"views": 600
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"repository": {
+			"github": "https://github.com/bcn-team/expense-tracker",
+			"demo": "https://expenses-demo.bcn.com"
+		},
+		"team_members": ["60d0fe4f5311236168a109cd"],
+		"status": "hoàn thành",
+		"created_at": "2024-01-05T00:00:00Z",
+		"updated_at": "2024-02-25T00:00:00Z"
+	}
+]
