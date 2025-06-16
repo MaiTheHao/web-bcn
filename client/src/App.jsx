@@ -2,7 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import Projects from './pages/Projects/Projects';
-import DataProjectDetail from './pages/ProjectDetail/ProjectDetail.json';
+import MemberDetail from './pages/MemberDetail/MemberDetail';
+import projects from './pages/ProjectDetail/ProjectDetail.json';
 
 function App() {
 	return (
@@ -13,9 +14,17 @@ function App() {
 					<Route path='/projects' element={<Projects />} />
 					<Route
 						path='/project/:id'
-						element={	
+						element={
 							<div>
-								<ProjectDetail projects={DataProjectDetail} />
+								<ProjectDetail projects={projects} />
+							</div>
+						}
+					/>
+					<Route
+						path='/member/:id'
+						element={
+							<div>
+								<MemberDetail />
 							</div>
 						}
 					/>
