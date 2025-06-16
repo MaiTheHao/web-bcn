@@ -61,11 +61,35 @@
 		}
 	},
 	"apiIntegration": {
-		"description": "Cấu trúc tích hợp API endpoints trong ứng dụng",
+		"description": "Cấu trúc tích hợp API endpoints trong ứng dụng (hiện đang sử dụng mock data)",
+		"mockImplementation": {
+			"description": "Hiện tại ứng dụng đang sử dụng mock data từ JSON files vì server chưa sẵn sàng",
+			"mockDataLocations": {
+				"users": "/mock_datas/users_collection.data.json",
+				"projects": "/mock_datas/projects_collection.data.json"
+			},
+			"transitionPlan": "Khi backend sẵn sàng, chỉ cần thay đổi base_url trong các service files mà không cần thay đổi logic xử lý"
+		},
+		"availableServices": {
+			"users": {
+				"getAllUsers": "Lấy tất cả người dùng từ mock data",
+				"getUserById": "Lấy người dùng theo ID từ mock data",
+				"getUserByEmail": "Lấy người dùng theo email từ mock data",
+				"getUsersWithPagination": "Lấy danh sách người dùng với phân trang (page, limit)"
+			},
+			"projects": {
+				"getAllProjects": "Lấy tất cả dự án từ mock data",
+				"getProjectById": "Lấy dự án theo ID từ mock data",
+				"getProjectsByUserId": "Lấy danh sách dự án theo thành viên",
+				"getProjectsWithPagination": "Lấy danh sách dự án với phân trang (page, limit)"
+			}
+		},
 		"endpointStructure": {
 			"users": {
 				"getAllUsers": "GET /api/users - Lấy tất cả người dùng",
 				"getUserById": "GET /api/users/:id - Lấy người dùng theo ID",
+				"getUserByEmail": "GET /api/users?email=:email - Lấy người dùng theo email",
+				"getUsersWithPagination": "GET /api/users?page=:page&limit=:limit - Lấy người dùng với phân trang",
 				"createUser": "POST /api/users - Tạo người dùng mới",
 				"updateUser": "PUT /api/users/:id - Cập nhật thông tin người dùng",
 				"deleteUser": "DELETE /api/users/:id - Xóa người dùng"
@@ -73,6 +97,8 @@
 			"projects": {
 				"getAllProjects": "GET /api/projects - Lấy tất cả dự án",
 				"getProjectById": "GET /api/projects/:id - Lấy dự án theo ID",
+				"getProjectsByUserId": "GET /api/projects?userId=:userId - Lấy dự án theo user ID",
+				"getProjectsWithPagination": "GET /api/projects?page=:page&limit=:limit - Lấy dự án với phân trang",
 				"createProject": "POST /api/projects - Tạo dự án mới",
 				"updateProject": "PUT /api/projects/:id - Cập nhật thông tin dự án",
 				"deleteProject": "DELETE /api/projects/:id - Xóa dự án"
@@ -82,7 +108,7 @@
 			"howToUse": "Import từ services/api và gọi async/await",
 			"example": "const userData = await getUserById(id);"
 		},
-		"notes": "Tất cả các API calls đều trả về Promises và nên được xử lý với try/catch"
+		"notes": "Tất cả các API calls đều trả về Promises và nên được xử lý với try/catch. Hiện tại đang sử dụng mock data, các chức năng thêm/sửa/xóa chưa được triển khai."
 	},
 	"dataTransformation": {
 		"description": "Chuyển đổi dữ liệu từ API thành props cho components",
