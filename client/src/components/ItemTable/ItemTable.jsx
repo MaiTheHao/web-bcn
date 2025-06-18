@@ -3,17 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import { useState, useMemo } from 'react';
 import { calcPagination } from '../../styles/utils/getPagination';
-import Projectcard from '../ProjectCard/ProjectCard';
 
-const LIMIT = 8;
-
-function ItemTable({ title = 'Project', projects = [] }) {
+function ItemTable({ title = 'Project', items = [], itemsPerRow = 2, rowsPerPage = 2 }) {
+	const LIMIT = itemsPerRow * rowsPerPage;
 	const [page, setPage] = useState(1);
 
-	// Dựa theo tổng số lượng project cards và số lượng project cards cần trên mỗi trang -> tính toán phân trang 
-	// -> trả về object chứ index trang hiện tại, ... , tổng số trang 
-
-	const pagination = useMemo(() => calcPagination(page, LIMIT, projects.length), [page, projects.length]);
+	const pagination = useMemo(() => calcPagination(page, LIMIT, items.length), [page, items.length, LIMIT]);
 
 	const handleChangePage = (newPage) => {
 		if (newPage >= 1 && newPage <= pagination.totalPage) {
@@ -28,7 +23,7 @@ function ItemTable({ title = 'Project', projects = [] }) {
 
 	const startIndex = (page - 1) * LIMIT;
 	const endIndex = startIndex + LIMIT;
-	const currentProjects = projects.slice(startIndex, endIndex);
+	const currentItems = items.slice(startIndex, endIndex);
 
 	const getPageNumbers = () => {
 		const pages = [];
@@ -49,37 +44,20 @@ function ItemTable({ title = 'Project', projects = [] }) {
 
 	const pageNumbers = getPageNumbers();
 
-
 	return (
-		<div className='project'>
-			<h1 className='title'>{title}</h1>
-			<div className='project-cart'>
-				<ul className='project-list'>
-					{currentProjects.map((project, index) => (
-					
-					<li className='project-card' key={index}>
-						<Projectcard
-							thumbnail={project.thumbnail}
-							projectName={project.projectName}
-							projectDes={project.projectDes}
-							numberStar={project.numberStar}
-							numberView={project.numberView}
-							startDate={project.startDate}
-							finishDate={project.finishDate}
-							technologies={project.technologies}
-						/>
-					</li>
-					
-
-				))}
+		<div className='item-table'>
+			<h1 className='item-table__title'>{title}</h1>
+			<div className='item-table__body'>
+				<ul className='item-table__list'>
+					{currentItems.map((item, index) => (
+						<li className='item-table__list-item' key={index} style={{ flex: `1 0 calc((100% - 20px * ${itemsPerRow - 1}) / ${itemsPerRow})` }}>
+							{item}
+						</li>
+					))}
 				</ul>
 				{pagination.totalPage > 1 && (
 					<div className='pagination'>
-						<button
-							className='pagination-button pagination-button-prev'
-							onClick={handlePrevPage}
-							disabled={page === 1}
-						>
+						<button className='pagination-button pagination-button-prev' onClick={handlePrevPage} disabled={page === 1}>
 							<FontAwesomeIcon icon={faAnglesLeft} />
 						</button>
 						{pageNumbers.map((p, idx) =>
@@ -88,20 +66,12 @@ function ItemTable({ title = 'Project', projects = [] }) {
 									...
 								</span>
 							) : (
-								<button
-									key={p}
-									className={`pagination-button pagination-number ${isActivePage(p)}`}
-									onClick={() => handleChangePage(p)}
-								>
+								<button key={p} className={`pagination-button pagination-number ${isActivePage(p)}`} onClick={() => handleChangePage(p)}>
 									{p}
 								</button>
 							)
 						)}
-						<button
-							className='pagination-button pagination-button-next'
-							onClick={handleNextPage}
-							disabled={page === pagination.totalPage}
-						>
+						<button className='pagination-button pagination-button-next' onClick={handleNextPage} disabled={page === pagination.totalPage}>
 							<FontAwesomeIcon icon={faAnglesRight} />
 						</button>
 					</div>

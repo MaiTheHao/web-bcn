@@ -1,20 +1,10 @@
-import { technologiesMapped } from '../../consts/technologiesMapped';
+import { Link } from 'react-router-dom';
+import { technologiesMapped } from '../../../consts/technologiesMapped';
 import './ProjectCard.css';
 import starIcon from '/star/star.png';
 import viewIcon from '/view/view.png';
 
-// NOTE: TECHNOLOGIES PHẢI THÊM ID ĐỂ ĐÁNH INDEX KHI RENDER RA 
-
-function Projectcard({
-	thumbnail,
-	projectName,
-	projectDes,
-	numberStar,
-	numberView,
-	startDate,
-	finishDate,
-	technologies,
-}) {
+function Projectcard({ id, thumbnail, projectName, projectDes, numberStar, numberView, startDate, finishDate, technologies }) {
 	return (
 		<div id='project-card'>
 			<img src={thumbnail} alt='image' />
@@ -48,10 +38,10 @@ function Projectcard({
 							{startDate} - {finishDate}
 						</p>
 					</div>
-					<a href='#'>
+					<Link to={`${id}`}>
 						<p>MORE</p>
 						<img src='/MoreButton/moreButton.png' alt='' />
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>

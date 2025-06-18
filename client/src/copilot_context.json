@@ -1,0 +1,278 @@
+{
+	"title": "Web BCN - Frontend Developer Context",
+	"version": "1.0.0",
+	"lastUpdated": "2024-05-01",
+	"dataModels": {
+		"users": {
+			"description": "Schema thông tin người dùng/thành viên",
+			"schema": {
+				"_id": "String - MongoDB ObjectId",
+				"user_id": "Number - ID người dùng",
+				"username": "String - Username đăng nhập",
+				"email": "String - Email liên hệ",
+				"password": "String - Mật khẩu đã được mã hóa",
+				"profile": {
+					"avt": "String - Đường dẫn đến avatar",
+					"name": "String - Tên hiển thị",
+					"job": "String - Chức danh công việc",
+					"status": "String - Trạng thái (Sinh viên năm...)",
+					"bio": "String - Giới thiệu ngắn"
+				},
+				"role": "String - Vai trò (MEMBER, LEADER, ADMIN)",
+				"statistics": {
+					"star": "Number - Số sao đánh giá",
+					"view": "Number - Số lượt xem",
+					"project_count": "Number - Số dự án tham gia"
+				},
+				"technologies": "Array<String> - Danh sách công nghệ thành thạo",
+				"projects": "Array<String> - Danh sách ID dự án đã tham gia",
+				"created_at": "String - Ngày tạo (ISO format)",
+				"updated_at": "String - Ngày cập nhật (ISO format)"
+			},
+			"notes": "Các ID projects là references đến collection projects"
+		},
+		"projects": {
+			"description": "Schema thông tin dự án",
+			"schema": {
+				"_id": "String - MongoDB ObjectId",
+				"name": "String - Tên dự án",
+				"slug": "String - Slug URL (dùng cho routing)",
+				"description": "String - Mô tả chi tiết",
+				"thumbnail": "String - Đường dẫn đến ảnh thumbnail",
+				"dates": {
+					"start": "String - Thời gian bắt đầu (MM/YYYY)",
+					"finish": "String - Thời gian kết thúc (MM/YYYY)"
+				},
+				"statistics": {
+					"stars": "Number - Số sao đánh giá",
+					"views": "Number - Số lượt xem"
+				},
+				"technologies": "Array<String> - Danh sách công nghệ sử dụng",
+				"repository": {
+					"github": "String - Link GitHub repo",
+					"demo": "String - Link demo"
+				},
+				"team_members": "Array<String> - Danh sách ID thành viên tham gia",
+				"status": "String - Trạng thái dự án (hoàn thành, đang thực hiện)",
+				"created_at": "String - Ngày tạo (ISO format)",
+				"updated_at": "String - Ngày cập nhật (ISO format)"
+			},
+			"notes": "Các ID team_members là references đến collection users"
+		}
+	},
+	"apiIntegration": {
+		"description": "Cấu trúc tích hợp API endpoints trong ứng dụng (hiện đang sử dụng mock data)",
+		"mockImplementation": {
+			"description": "Hiện tại ứng dụng đang sử dụng mock data từ JSON files vì server chưa sẵn sàng",
+			"mockDataLocations": {
+				"users": "/mock_datas/users_collection.data.json",
+				"projects": "/mock_datas/projects_collection.data.json"
+			},
+			"transitionPlan": "Khi backend sẵn sàng, chỉ cần thay đổi base_url trong các service files mà không cần thay đổi logic xử lý"
+		},
+		"availableServices": {
+			"users": {
+				"getAllUsers": "Lấy tất cả người dùng từ mock data",
+				"getUserById": "Lấy người dùng theo ID từ mock data",
+				"getUserByEmail": "Lấy người dùng theo email từ mock data",
+				"getUsersWithPagination": "Lấy danh sách người dùng với phân trang (page, limit)"
+			},
+			"projects": {
+				"getAllProjects": "Lấy tất cả dự án từ mock data",
+				"getProjectById": "Lấy dự án theo ID từ mock data",
+				"getProjectsByUserId": "Lấy danh sách dự án theo thành viên",
+				"getProjectsWithPagination": "Lấy danh sách dự án với phân trang (page, limit)"
+			}
+		},
+		"endpointStructure": {
+			"users": {
+				"getAllUsers": "GET /api/users - Lấy tất cả người dùng",
+				"getUserById": "GET /api/users/:id - Lấy người dùng theo ID",
+				"getUserByEmail": "GET /api/users?email=:email - Lấy người dùng theo email",
+				"getUsersWithPagination": "GET /api/users?page=:page&limit=:limit - Lấy người dùng với phân trang",
+				"createUser": "POST /api/users - Tạo người dùng mới",
+				"updateUser": "PUT /api/users/:id - Cập nhật thông tin người dùng",
+				"deleteUser": "DELETE /api/users/:id - Xóa người dùng"
+			},
+			"projects": {
+				"getAllProjects": "GET /api/projects - Lấy tất cả dự án",
+				"getProjectById": "GET /api/projects/:id - Lấy dự án theo ID",
+				"getProjectsByUserId": "GET /api/projects?userId=:userId - Lấy dự án theo user ID",
+				"getProjectsWithPagination": "GET /api/projects?page=:page&limit=:limit - Lấy dự án với phân trang",
+				"createProject": "POST /api/projects - Tạo dự án mới",
+				"updateProject": "PUT /api/projects/:id - Cập nhật thông tin dự án",
+				"deleteProject": "DELETE /api/projects/:id - Xóa dự án"
+			}
+		},
+		"usage": {
+			"howToUse": "Import từ services/api và gọi async/await",
+			"example": "const userData = await getUserById(id);"
+		},
+		"notes": "Tất cả các API calls đều trả về Promises và nên được xử lý với try/catch. Hiện tại đang sử dụng mock data, các chức năng thêm/sửa/xóa chưa được triển khai."
+	},
+	"dataTransformation": {
+		"description": "Chuyển đổi dữ liệu từ API thành props cho components",
+		"transformers": {
+			"transformUserToMemberCard": {
+				"input": "User object từ API",
+				"output": "Props cho MemberCard component",
+				"mapping": {
+					"id": "user._id",
+					"avatar": "user.profile.avt",
+					"role": "user.role",
+					"name": "user.profile.name",
+					"jobTitle": "user.profile.job",
+					"status": "user.profile.status",
+					"starCount": "user.statistics.star",
+					"viewCount": "user.statistics.view",
+					"projectCount": "user.statistics.project_count",
+					"technologies": "user.technologies được map thành array của {id, name}"
+				}
+			},
+			"transformProjectToProjectCard": {
+				"input": "Project object từ API",
+				"output": "Props cho ProjectCard component",
+				"mapping": {
+					"id": "project._id",
+					"thumbnail": "project.thumbnail",
+					"projectName": "project.name",
+					"projectDes": "project.description",
+					"numberStar": "project.statistics.stars",
+					"numberView": "project.statistics.views",
+					"startDate": "project.dates.start",
+					"finishDate": "project.dates.finish",
+					"technologies": "project.technologies"
+				}
+			}
+		},
+		"usage": {
+			"howToUse": "Import từ services/transform và áp dụng cho objects",
+			"example": "const transformedMembers = usersData.map(transformUserToMemberCard);"
+		},
+		"notes": "Các hàm transform trả về null nếu dữ liệu đầu vào không hợp lệ"
+	},
+	"paginationUtils": {
+		"description": "Các utility functions để phân trang dữ liệu",
+		"functions": {
+			"calculatePagination": {
+				"description": "Tính toán cấu hình phân trang",
+				"params": {
+					"totalItems": "Tổng số mục trong danh sách",
+					"itemsPerPage": "Số mục trên mỗi trang",
+					"currentPage": "Trang hiện tại (bắt đầu từ 1)"
+				},
+				"returns": {
+					"totalItems": "Tổng số mục",
+					"itemsPerPage": "Số mục trên mỗi trang",
+					"currentPage": "Trang hiện tại",
+					"totalPage": "Tổng số trang",
+					"startIndex": "Chỉ số bắt đầu của mục trên trang hiện tại",
+					"endIndex": "Chỉ số kết thúc của mục trên trang hiện tại"
+				}
+			},
+			"paginate": {
+				"description": "Chia một mảng thành các trang",
+				"params": {
+					"items": "Mảng các mục cần phân trang",
+					"itemsPerPage": "Số mục trên mỗi trang",
+					"currentPage": "Trang hiện tại (bắt đầu từ 1)"
+				},
+				"returns": {
+					"items": "Mảng các mục trên trang hiện tại",
+					"pagination": "Đối tượng cấu hình phân trang"
+				}
+			}
+		},
+		"usage": {
+			"example1": "import { paginate } from '../utils/pagination.util';",
+			"example2": "const { items: currentPageItems, pagination } = paginate(allMembers, 10, currentPage);"
+		},
+		"notes": "Sử dụng với ItemTable component để hiển thị phân trang"
+	},
+	"componentsUsage": {
+		"itemTable": {
+			"description": "Component hiển thị danh sách các items theo grid layout với phân trang",
+			"props": {
+				"title": "String - Tiêu đề cho bảng",
+				"items": "Array - Danh sách các item components để hiển thị",
+				"itemsPerRow": "Number - Số items trên mỗi hàng (default: 2)",
+				"rowsPerPage": "Number - Số hàng trên mỗi trang (default: 3)"
+			},
+			"example": "<ItemTable title='THÀNH VIÊN' items={memberCards} itemsPerRow={2} rowsPerPage={2} />"
+		},
+		"memberCard": {
+			"description": "Component hiển thị thông tin thành viên",
+			"props": {
+				"id": "String/Number - ID của thành viên",
+				"avt": "String - Đường dẫn đến avatar",
+				"role": "String - Vai trò (MEMBER, LEADER)",
+				"name": "String - Tên thành viên",
+				"job": "String - Chức danh công việc",
+				"status": "String - Trạng thái",
+				"numberStars": "Number - Số sao đánh giá",
+				"numberView": "Number - Số lượt xem",
+				"projects": "Number - Số dự án tham gia",
+				"technologies": "Array - Danh sách công nghệ"
+			}
+		},
+		"projectCard": {
+			"description": "Component hiển thị thông tin dự án",
+			"props": {
+				"id": "String/Number - ID của dự án",
+				"thumbnail": "String - Đường dẫn đến ảnh thumbnail",
+				"projectName": "String - Tên dự án",
+				"projectDes": "String - Mô tả dự án",
+				"numberStar": "Number - Số sao đánh giá",
+				"numberView": "Number - Số lượt xem",
+				"startDate": "String - Ngày bắt đầu",
+				"finishDate": "String - Ngày kết thúc",
+				"technologies": "Array - Danh sách công nghệ sử dụng"
+			}
+		}
+	},
+	"workflowExamples": {
+		"loadingMembers": {
+			"description": "Quy trình để tải và hiển thị danh sách thành viên",
+			"steps": [
+				"Import getAllUsers từ services/api",
+				"Import transformUserToMemberCard từ services/transform",
+				"Gọi getAllUsers() trong useEffect",
+				"Map kết quả qua transformUserToMemberCard",
+				"Render danh sách với ItemTable component"
+			],
+			"codeExample": "const [members, setMembers] = useState([]);\nconst [loading, setLoading] = useState(true);\n\nuseEffect(() => {\n  const fetchMembers = async () => {\n    try {\n      setLoading(true);\n      const usersData = await getAllUsers();\n      const transformedMembers = usersData.map(transformUserToMemberCard).filter(Boolean);\n      setMembers(transformedMembers);\n    } catch (err) {\n      console.error(err);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  fetchMembers();\n}, []);"
+		},
+		"loadingSingleMember": {
+			"description": "Quy trình để tải và hiển thị chi tiết một thành viên",
+			"steps": ["Import getUserById từ services/api", "Lấy id từ URL params", "Gọi getUserById(id) trong useEffect", "Render thông tin thành viên và danh sách dự án của họ"],
+			"codeExample": "const { id } = useParams();\nconst [member, setMember] = useState(null);\n\nuseEffect(() => {\n  const fetchMember = async () => {\n    try {\n      const data = await getUserById(id);\n      setMember(data);\n    } catch (error) {\n      console.error('Lỗi khi lấy dữ liệu thành viên:', error);\n    }\n  };\n\n  fetchMember();\n}, [id]);"
+		}
+	},
+	"technologiesMapped": {
+		"description": "Mapping của tên công nghệ đến icon tương ứng",
+		"notes": "Được định nghĩa trong src/consts/technologiesMapped.js",
+		"usage": "import { technologiesMapped } from '../../consts/technologiesMapped';",
+		"example": "{technologiesMapped[tech] ? <img src={technologiesMapped[tech]} alt={tech} /> : <span>{tech}</span>}"
+	},
+	"commonIssues": {
+		"referenceErrors": {
+			"problem": "Lỗi khi reference giữa users và projects không đúng",
+			"solution": "Đảm bảo ID trong projects.team_members và users.projects tồn tại trong collections tương ứng"
+		},
+		"missingTechnologies": {
+			"problem": "Icon công nghệ không hiển thị",
+			"solution": "Kiểm tra tên công nghệ trong data có khớp với keys trong technologiesMapped không"
+		}
+	},
+	"developmentGuides": {
+		"addingNewMember": {
+			"steps": ["Thêm object mới vào users_collection.data.json", "Đảm bảo có đủ các trường theo schema", "Cập nhật các reference projects nếu cần"]
+		},
+		"addingNewProject": {
+			"steps": ["Thêm object mới vào projects_collection.data.json", "Đảm bảo có đủ các trường theo schema", "Cập nhật các reference team_members nếu cần"]
+		},
+		"extendingPagination": {
+			"steps": ["Import { calculatePagination, paginate } từ utils/pagination.util.js", "Áp dụng paginate() cho mảng dữ liệu", "Sử dụng kết quả pagination để hiển thị UI phân trang"]
+		}
+	}
+}

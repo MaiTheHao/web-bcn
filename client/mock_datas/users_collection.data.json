@@ -1,0 +1,122 @@
+[
+	{
+		"_id": "60d0fe4f5311236168a109ca",
+		"user_id": 1,
+		"username": "phan_luan",
+		"email": "phanluan@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/phanhoangluan.png",
+			"name": "Phan Luân",
+			"job": "Mobile App Developer",
+			"status": "Sinh viên năm nhất",
+			"bio": "Passionate mobile app developer with experience in React Native and Flutter."
+		},
+		"role": "MEMBER",
+		"statistics": {
+			"star": 999,
+			"view": 999,
+			"project_count": 3
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"projects": ["60d0fe4f5311236168a109d0", "60d0fe4f5311236168a109d2", "60d0fe4f5311236168a109d4"],
+		"created_at": "2023-01-01T00:00:00Z",
+		"updated_at": "2024-03-15T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109cb",
+		"user_id": 2,
+		"username": "minhvu",
+		"email": "nguyenminhvu@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/nguyenminhvu.png",
+			"name": "Nguyễn Minh Vũ",
+			"job": "Mobile App Developer",
+			"status": "Sinh viên năm nhất",
+			"bio": "Developing innovative mobile applications with a focus on user experience."
+		},
+		"role": "MEMBER",
+		"statistics": {
+			"star": 999,
+			"view": 999,
+			"project_count": 3
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"projects": ["60d0fe4f5311236168a109d1", "60d0fe4f5311236168a109d5", "60d0fe4f5311236168a109d7"],
+		"created_at": "2023-01-10T00:00:00Z",
+		"updated_at": "2024-02-20T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109cc",
+		"user_id": 3,
+		"username": "honganh",
+		"email": "honganh@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/dangthihonganh.png",
+			"name": "Đăng Thị Hồng Anh",
+			"job": "Mobile App Developer",
+			"status": "Sinh viên năm nhất",
+			"bio": "Creative developer with a strong background in UI design."
+		},
+		"role": "MEMBER",
+		"statistics": {
+			"star": 999,
+			"view": 999,
+			"project_count": 3
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"projects": ["60d0fe4f5311236168a109d3", "60d0fe4f5311236168a109d6", "60d0fe4f5311236168a109d8"],
+		"created_at": "2023-02-15T00:00:00Z",
+		"updated_at": "2024-03-01T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109cd",
+		"user_id": 4,
+		"username": "trunghau",
+		"email": "nguyentrunghau@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/nguyentrunghau.png",
+			"name": "Nguyễn Trung Hậu",
+			"job": "Mobile App Developer",
+			"status": "Sinh viên năm nhất",
+			"bio": "Detail-oriented developer focusing on creating seamless mobile experiences."
+		},
+		"role": "MEMBER",
+		"statistics": {
+			"star": 999,
+			"view": 999,
+			"project_count": 1
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"projects": ["60d0fe4f5311236168a109d9"],
+		"created_at": "2023-03-05T00:00:00Z",
+		"updated_at": "2024-02-28T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109ce",
+		"user_id": 5,
+		"username": "vannam",
+		"email": "tranvannam@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/student5.png",
+			"name": "Trần Văn Nam",
+			"job": "Mobile App Developer",
+			"status": "Sinh viên năm nhất",
+			"bio": "Full-stack developer with a passion for mobile app development."
+		},
+		"role": "MEMBER",
+		"statistics": {
+			"star": 999,
+			"view": 999,
+			"project_count": 1
+		},
+		"technologies": ["html", "css", "js", "react"],
+		"projects": ["60d0fe4f5311236168a109d0"],
+		"created_at": "2023-01-20T00:00:00Z",
+		"updated_at": "2024-03-10T00:00:00Z"
+	}
+]
