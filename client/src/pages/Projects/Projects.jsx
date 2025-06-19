@@ -16,14 +16,38 @@ function Projects() {
       technologies={project.technologies}
     />
   ));
+  const options1 = [
+    // Lưu ý phàn tử đầu nên là một tiêu đề
+    "Lĩnh vực",
+    "Web Development",
+    "Mobile Development",
+    "Data Science",
+    "AI/Machine Learning",
+    "DevOps",
+    "Cybersecurity",
+    "Cloud Computing",
+    "UI/UX Design",
+    "Game Development",
+    "Embedded Systems",
+    "Blockchain",
+  ];
+
+    const options2 = [
+    // Lưu ý phàn tử đầu nên là một tiêu đề
+    "Công nghệ",
+    "React",
+    "Node.js"
+    ];
   const cols = 2;
-  const rows = 4;
+  const rows = 2;
   return (
     <ItemTable
       title="Our Projects"
       items={projectCards}
       itemsPerRow={cols}
-	  rowsPerPage={rows}
+      rowsPerPage={rows}
+      Options1={options1}
+      Options2={options2}
     />
   );
 }

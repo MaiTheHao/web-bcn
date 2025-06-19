@@ -3,8 +3,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import { useState, useMemo } from 'react';
 import { calcPagination } from '../../styles/utils/getPagination';
+import DropDownIcon from '/svg/DropDown.svg';
+import SearchIcon from '/svg/Search.svg';
 
-function ItemTable({ title = 'Project', items = [], itemsPerRow = 4, rowsPerPage = 2 }) {
+
+function ItemTable({ 
+	title, 
+	items, 
+	itemsPerRow = 2, 
+	rowsPerPage = 2,
+	Options1 = [
+		// Lưu ý phàn tử đầu nên là một tiêu đề
+		"Title"
+	],
+	Options2 = [
+		// Lưu ý phàn tử đầu nên là một tiêu đề
+		"Title"
+	]
+}) {
 	const LIMIT = itemsPerRow * rowsPerPage;
 	const [page, setPage] = useState(1);
 
@@ -44,40 +60,55 @@ function ItemTable({ title = 'Project', items = [], itemsPerRow = 4, rowsPerPage
 
 	const pageNumbers = getPageNumbers();
 
+	const [selection1, setSelection1] = useState(Options1[0] || "...");
+	const [selection2, setSelection2] = useState(Options2[0] || "...");
+	const handleSelection1Change = (e) => {
+		setSelection1(e.target.value);
+	};
+
+	const handleSelection2Change = (e) => {
+		setSelection2(e.target.value);
+	};
 	return (
 		<div className='item'>
 			<h1 className='title'>{title}</h1>
-<<<<<<< HEAD
+
+			<div className="filter-container">
+				<div className="filter-item">
+					<h2>{selection1}</h2>
+					<img src={DropDownIcon} alt="Dropdown Icon" className="dropdown-icon" />
+					<select onChange={handleSelection1Change} className="select-skill">
+						{Options1.map((option, index) => (
+							<option key={index} value={option}>{option}</option>
+						))}
+					</select>
+				</div>
+				<div className="filter-item">
+					<h2>{selection2}</h2>
+					<img src={DropDownIcon} alt="Dropdown Icon" className="dropdown-icon" />
+					<select onChange={handleSelection2Change} className="select-technical">
+						{Options2.map((option, index) => (
+							<option key={index} value={option}>{option}</option>
+						))}
+					</select>
+				</div>
+				<div className="filter-item">
+					<img src={SearchIcon} alt="Search Icon" className="search-icon" />
+					<input type="text" className="search-input" placeholder="Nhập từ khóa cần tìm kiếm" />
+				</div>
+			</div>
+
 			<div className='item-cart'>
 				<ul className='item-list' style={{ display: 'flex', flexWrap: 'wrap' }}>
 					{currentItems.map((item, index) => (
 						<li
 							className='item-card'
 							key={index}
-							style={{ width: `calc(${100 / itemsPerRow}% - 20px)` }}
+							style={{ width: `calc( (100% - ${20*(itemsPerRow - 1)}px) / ${itemsPerRow})` }}
 						>
 							{item}
 						</li>
 					))}
-=======
-			<div className='projects'>
-				<ul className='project-list'>
-					{currentProjects.map((project, index) => (
-					
-						<Projectcard  key={index}
-							thumbnail={project.thumbnail}
-							projectName={project.projectName}
-							projectDes={project.projectDes}
-							numberStar={project.numberStar}
-							numberView={project.numberView}
-							startDate={project.startDate}
-							finishDate={project.finishDate}
-							technologies={project.technologies}
-						/>
-					
-
-				))}
->>>>>>> 6e10b0cba703ca62dccf4b092459ea9b6d5187a9
 				</ul>
 				{pagination.totalPage > 1 && (
 					<div className='pagination'>

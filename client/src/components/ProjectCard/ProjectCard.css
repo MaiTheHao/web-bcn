@@ -1,6 +1,5 @@
 #project-card {
     display: flex;
-    width: calc((100% - 20px) / 2);
     height: 212px;
     border-radius: 15px;
     border: 1.5px solid var( --base-palette-black-100);
@@ -8,12 +7,6 @@
     overflow: hidden;
     user-select: none;
     transition: transform 0.2s ease, border-color 0.2s ease;
-}
-@media screen and (max-width: 1250px) {
-    #project-card{
-        width: calc(100% - 60px);
-        margin: auto;
-    }
 }
 #project-card:hover{
     transform: scale(1.025);
