@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './MemberDetail.css';
 import Projectcard from '../../components/ProjectCard/ProjectCard';
 
 function MemberDetail() {
   const [member, setMember] = useState(null);
+  const projectListRef = useRef(null);
 
   useEffect(() => {
     fetch('/MemberDetail.json')
@@ -33,31 +34,27 @@ function MemberDetail() {
           </div>
         </div>
         <div className="section">
-          <div className="section-title">MỤC TIÊU</div>
-          <div className="target">{member.target}</div>
-        </div>
-        <div className="section">
-          <div className="section-title">CHỨNG CHỈ</div>
-          <ul className="cert-list">
-            {member.certificates.map((c, i) => <li key={i}>{c}</li>)}
-          </ul>
-        </div>
-      </aside>
-      <main className="member-main">
-        <section className="skills-section">
           <div className="section-title">KỸ NĂNG</div>
           <div className="skills-list">
             {member.skills.map((skill, i) => (
               <span className="skill-item" key={i}>{skill}</span>
             ))}
           </div>
+        </div>
+      </aside>
+      <main className="member-main">
+        <section className="member-section">
+          <div className="member-section-title">VỀ BẢN THÂN</div>
+          <div className="member-description">{member.about}</div>
         </section>
         <section className="projects-section">
-          <div className="section-title">PROJECT</div>
-          <div className="projects-list">
-            {member.projects.map((project, i) => (
-              <Projectcard key={i} {...project} />
-            ))}
+          <div className="section-title">DỰ ÁN</div>
+          <div className="project-scroll-wrapper">
+            <div className="projects-list-horizontal" ref={projectListRef} tabIndex={0} style={{overflowX: 'auto', overflowY: 'hidden'}}>
+              {member.projects.map((project, i) => (
+                <Projectcard key={i} {...project} />
+              ))}
+            </div>
           </div>
         </section>
       </main>

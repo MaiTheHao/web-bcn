@@ -9,6 +9,40 @@
     margin-bottom: 20px;
 }
 
+.project-section {
+  margin: 0 40px 40px 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 32px 40px;
+}
+
+.project-section-title {
+  font-size: 22px;
+  font-weight: 500;
+  border-bottom: 2px solid #222;
+  margin-bottom: 18px;
+  display: inline-block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.project-description {
+    margin-top: 30px;
+}
+
+.project-description h2 {
+    font-size: var(--size-16px);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 10px;
+}
+
+.project-description p {
+    line-height: 36px;
+    font-size: var(--size-16px);
+    font-weight: var(--font-weight-medium);
+}
+
 .project-images {
     display: flex;
     gap: 20px;
@@ -77,20 +111,4 @@
     font-size: var(--size-16px);
     color: var(--base-palette-black-100);
     margin-top: var(--size-12px);
-}
-
-.project-description {
-    margin-top: 30px;
-}
-
-.project-description h2 {
-    font-size: var(--size-16px);
-    font-weight: var(--font-weight-medium);
-    margin-bottom: 10px;
-}
-
-.project-description p {
-    line-height: 36px;
-    font-size: var(--size-16px);
-    font-weight: var(--font-weight-medium);
 }
