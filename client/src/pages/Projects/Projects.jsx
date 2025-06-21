@@ -16,28 +16,40 @@ function Projects() {
       technologies={project.technologies}
     />
   ));
-  const options1 = [
-    // Lưu ý phàn tử đầu nên là một tiêu đề
-    "Lĩnh vực",
-    "Web Development",
-    "Mobile Development",
-    "Data Science",
-    "AI/Machine Learning",
-    "DevOps",
-    "Cybersecurity",
-    "Cloud Computing",
-    "UI/UX Design",
-    "Game Development",
-    "Embedded Systems",
-    "Blockchain",
+  const filterFields = [
+    {
+      fieldName: 'projectType',
+      placeholder: 'Chọn loại Lĩnh vực',
+      options: [
+        { label: 'Web Development', value: 'Web Development' },
+        { label: 'Mobile Development', value: 'Mobile Development' },
+        { label: 'Data Science', value: 'Data Science' },
+        { label: 'AI/Machine Learning', value: 'AI/Machine Learning' },
+        { label: 'DevOps', value: 'DevOps' },
+        { label: 'Cybersecurity', value: 'Cybersecurity' },
+        { label: 'Cloud Computing', value: 'Cloud Computing' },
+        { label: 'UI/UX Design', value: 'UI/UX Design' },
+        { label: 'Game Development', value: 'Game Development' },
+        { label: 'Embedded Systems', value: 'Embedded Systems' },
+        { label: 'Blockchain', value: 'Blockchain' },
+      ]
+    },
+    {
+      fieldName: 'status',
+      placeholder: 'Chọn trạng thái',
+      options: [
+        { label: 'React', value: 'React' },
+        { label: 'Node.js', value: 'Node.js' },
+        { label: 'Python', value: 'Python' },
+        { label: 'Java', value: 'Java' },
+        { label: 'C++', value: 'C++' },
+        { label: 'Ruby', value: 'Ruby' },
+        { label: 'PHP', value: 'PHP' },
+        { label: 'Go', value: 'Go' },
+        { label: 'Swift', value: 'Swift' },
+      ]
+    }
   ];
-
-    const options2 = [
-    // Lưu ý phàn tử đầu nên là một tiêu đề
-    "Công nghệ",
-    "React",
-    "Node.js"
-    ];
   const cols = 2;
   const rows = 2;
   return (
@@ -46,8 +58,7 @@ function Projects() {
       items={projectCards}
       itemsPerRow={cols}
       rowsPerPage={rows}
-      Options1={options1}
-      Options2={options2}
+      filterFields={filterFields}
     />
   );
 }

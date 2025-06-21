@@ -18,23 +18,28 @@ function Members() {
             technologies={member.technologies}
         />
     ));
-    const options1 = [
-    // Lưu ý phàn tử đầu nên là một tiêu đề
-    "Kỹ năng",
-    "Lập trình",
-    "Thiết kế",
-    "Quản lý dự án",
-    "Phát triển web",
-  ];
-
-  const options2 = [
-    // Lưu ý phàn tử đầu nên là một tiêu đề
-    "Chuyên môn kỹ thuât",
-    "Kinh nghiệm",
-    "Thời gian",
-    "Độ phổ biến",
-    "Độ khó",
-  ];
+    const filterFields = [
+      {
+      fieldName: 'skill',
+      placeholder: 'Chọn kỹ năng',
+      options: [
+        { label: 'Lập trình', value: 'Lập trình' },
+        { label: 'Thiết kế', value: 'Thiết kế' },
+        { label: 'Quản lý dự án', value: 'Quản lý dự án' },
+        { label: 'Phát triển web', value: 'Phát triển web' },
+      ]
+      },
+      {
+      fieldName: 'specialization',
+      placeholder: 'Chọn chuyên môn',
+      options: [
+        { label: 'Kinh nghiệm', value: 'Kinh nghiệm' },
+        { label: 'Thời gian', value: 'Thời gian' },
+        { label: 'Độ phổ biến', value: 'Độ phổ biến' },
+        { label: 'Độ khó', value: 'Độ khó' },
+      ]
+      }
+    ];
     const cols = 2;
     const rows = 2;
     return <ItemTable
@@ -42,8 +47,7 @@ function Members() {
         items={memberCards}
         itemsPerRow={cols}
         rowsPerPage={rows}
-        Options1={options1}
-        Options2={options2}
+        filterFields={filterFields}
     />;
 }
 
