@@ -4,10 +4,11 @@ import AppFooter from '../../components/AppFooter/AppFooter';
 import { Outlet } from 'react-router-dom';
 import AppBody from '../../components/AppBody/AppBody';
 
-function AppLayout() {
+function AppLayout({AdminDashboard}) {
 	return (
 		<>
 			<AppHeader />
+			{AdminDashboard}
 			<AppBody>
 				<Outlet />
 			</AppBody>

@@ -4,18 +4,18 @@ import ViewIcon from '/view/view.png';
 import { technologiesMapped } from '../../../consts/technologiesMapped';
 import { Link } from 'react-router-dom';
 
-function MemberCard({ avatar, role, id, name, jobTitle, status, starCount, viewCount, projectCount, technologies }) {
+function MemberCard({ avt, role, id, name, jobTitle, status, starCount, viewCount, projectCount, technologies }) {
 	return (
 		<div className='member-card'>
 			<div className='member-card__right'>
-				<div className='member-card__avatar'>{avatar ? <img src={avatar} alt='avatar' /> : <img src='/default-avatar.png' alt='default avatar' />}</div>
+				<div className='member-card__avatar'>{avt ? <img src={avt} alt='avt' /> : <img src='/default-avt.png' alt='default avt' />}</div>
 				<div className='member-card__stats'>
-					{/* star */}
+
 					<div className='member-card__stat'>
 						<img src={StarIcon} alt='star' />
 						<p>{starCount}</p>
 					</div>
-					{/* view */}
+					
 					<div className='member-card__stat member-card__stat--view'>
 						<img src={ViewIcon} alt='view' />
 						<p>{viewCount}</p>
@@ -38,7 +38,7 @@ function MemberCard({ avatar, role, id, name, jobTitle, status, starCount, viewC
 				<p className='member-card__info member-card__info--projects'>
 					Dự án: {projectCount} <span>(Đã tham gia)</span>
 				</p>
-				<Link to={`${id}`} className='member-card__more'>
+				<Link to={`/members/${id}`} className='member-card__more'>
 					<p>MORE</p>
 					<img src='/MoreButton/moreButton.png' alt='more' />
 				</Link>

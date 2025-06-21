@@ -3,6 +3,7 @@
 	aspect-ratio: 562 / 245;
 	height: 100%;
 	width: 100%;
+	max-width: 562px;
 	display: flex;
 	gap: 20px;
 	border-radius: 15px;
@@ -96,8 +97,8 @@
 }
 
 .member-card__tech-list img {
-	width: 29px;
-	height: 29px;
+	aspect-ratio: 1;
+	height: 24px;
 }
 
 /* Left section */
@@ -106,6 +107,10 @@
 	height: 100%;
 	background-color: white;
 	position: relative;
+}
+
+.member-card__left > p{
+	text-align: left;
 }
 
 .member-card__info {

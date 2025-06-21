@@ -32,15 +32,9 @@ function Projects() {
 	const projectCards = projects.map((project) => (
 		<ProjectCard
 			key={project.id}
-			id={project.id}
-			thumbnail={project.thumbnail}
-			projectName={project.projectName}
-			projectDes={project.projectDes}
-			numberStar={project.numberStar}
-			numberView={project.numberView}
-			startDate={project.startDate}
-			finishDate={project.finishDate}
-			technologies={project.technologies}
+			{
+				...project
+			}
 		/>
 	));
 

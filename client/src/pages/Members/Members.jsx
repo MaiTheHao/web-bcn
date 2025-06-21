@@ -13,8 +13,8 @@ function Members() {
 		const fetchMembers = async () => {
 			try {
 				setLoading(true);
-				const usersData = await getAllUsers();
-				const transformedMembers = usersData.map(transformUserToMemberCard).filter(Boolean);
+				const usersData = await getAllUsers(); // trả về All Data Users từ mock API 
+				const transformedMembers = usersData.map(transformUserToMemberCard).filter(Boolean); // Biến user data -> members array -> lọc các giá trị null 
 				setMembers(transformedMembers);
 			} catch (err) {
 				setError(err.message);
@@ -28,21 +28,13 @@ function Members() {
 
 	if (loading) return <div>Tải thành viên...</div>;
 	if (error) return <div>Lỗi khi tải thành viên: {error}</div>;
-	console.log('Members:', members);
-
+	
 	const memberCards = members.map((member) => (
 		<MemberCard
 			key={member.id}
-			id={member.id}
-			avt={member.avatar}
-			role={member.role}
-			name={member.name}
-			job={member.jobTitle}
-			status={member.status}
-			numberStars={member.starCount}
-			numberView={member.viewCount}
-			projects={member.projectCount}
-			technologies={member.technologies}
+			{
+				...member
+			}
 		/>
 	));
 

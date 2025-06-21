@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import { getAllUsers } from './services/api/user-api.service';
 import MemberDetail from './pages/MemberDetail/MemberDetail';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
+import AppBody from './components/AppBody/AppBody';
 
 function App() {
 	useEffect(() => {
@@ -25,6 +27,7 @@ function App() {
 					<Route path='/projects/:id' element={<ProjectDetail />} />
 					<Route path='members' element={<Members />} />
 					<Route path='members/:id' element={<MemberDetail />} />
+					
 					{/* <Route
 						path='/project/:id'
 						element={
@@ -40,10 +43,42 @@ function App() {
 								<MemberDetail />
 							</div>
 						}
-					/>
+						/>
 					
 					<Route path='*' element={<div>404 Not Found</div>} /> */}
 				</Route>
+
+				{/* Logic điều hướng tới trang Admin Dashboard */}
+				<Route path='/admindashboard' element={<AppLayout
+					AdminDashboard={<AdminDashboard 
+						adminName="Nguyễn Hùng"
+						numberStudentsParticipate={1.474}
+						events={1}
+						articles={3}
+    					listStudents ={[
+							{
+								id:1,
+								name: "bancongnghe@gmail.com"
+							},
+							{
+								id:2,
+								name: "bancongnghe@gmail.com"
+							},
+							{
+								id:3,
+								name: "bancongnghe@gmail.com"
+							},
+							{
+								id:4,
+								name: "bancongnghe@gmail.com"
+							},
+							{
+								id:5,
+								name: "bancongnghe@gmail.com"
+							}
+						]}
+					/>}
+				/>}/>
 			</Routes>
 		</BrowserRouter>
 	);

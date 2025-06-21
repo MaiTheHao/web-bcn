@@ -1,0 +1,276 @@
+.admin-dashboard{
+    margin: auto;
+    width: 100%;
+    max-width:1680px;
+    height: 904px;
+    display: flex;
+}
+.admin-dashboard-info{
+    width: 361px;
+    height:100%;
+}
+.admin-dashboard-info-interface{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:20px;
+    gap:20px;
+}
+.admin-dashboard-info-interface > img{
+    width: 182px;
+    height: 182px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.admin-dashboard-info-interface > p{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+}
+.admin-dashboard-info-interface > p > span{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.0025em;
+    margin-left:8px;
+}
+.admin-dashboard-info-option{
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;   
+}
+.admin-dashboard-info-option > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 296px;
+    height: 40px;
+    border-radius: 10px;
+    gap:8px;
+    color: white;
+    background-color: #00ACC1;
+}
+.admin-dashboard-info-option > button > p{
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.001em;
+}
+.admin-dashboard-info-option > div{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+.admin-dashboard-terminal{
+    width: calc(100% - 361px);
+    height: 100%;
+    padding:0 20px;
+}
+.admin-dashboard-terminal-header{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+}
+.admin-dashboard-terminal-body{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-areas: 
+        "infowrapper react"
+        "studentsList projectsList";
+    grid-template-columns: minmax(562px,1.25fr) minmax(445px,1fr);
+    grid-template-rows: 397px 439px;
+    row-gap: 15px;
+    column-gap: 20px;
+}
+.admin-dashboard-terminal-body > div:nth-child(1){
+    width: 100%;    
+    border-radius: 15px;
+    grid-area: infowrapper;
+}
+.admin-dashboard-terminal-body > div:nth-child(2){
+    grid-area: react;
+    width: 100%;    
+    border-radius: 15px;
+    background-color: white;
+}
+.admin-dashboard-terminal-body > div:nth-child(3){
+    grid-area: studentsList;
+    width: 100%;    
+    border-radius: 15px;
+    background-color: white;
+}
+.admin-dashboard-terminal-body > div:nth-child(4){
+    grid-area: projectsList;
+    width: 100%;    
+    border-radius: 15px;
+    background-color: white;
+}
+.admin-dashboard-terminal-body-infowrapper{
+    display: grid;
+    grid-template-areas: 
+        "numberStudentsParticipate articles"
+        "events reports";
+    grid-template-columns: minmax(329px,1.5fr) minmax(213px,1fr);
+    grid-template-rows: 186px 191px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.admin-dashboard-terminal-body-infowrapper-numberstudents{
+    grid-area: numberStudentsParticipate;
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    border-radius: 15px;
+    align-content: flex-start;
+    background-color: white;
+}
+.admin-dashboard-terminal-body-infowrapper-numberstudents > div {
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+.admin-dashboard-terminal-body-infowrapper-numberstudents > div > img{
+    width:54px;
+    height: 54px;
+}
+.admin-dashboard-terminal-body-infowrapper-numberstudents > p:nth-child(2){
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 57px;
+    line-height: 64px;
+    letter-spacing: -0.0025em;
+}
+
+
+.admin-dashboard-terminal-body-infowrapper-articles{
+    grid-area: articles;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+}
+.admin-dashboard-terminal-body-infowrapper-articles > p:nth-child(2){
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 57px;
+    line-height: 64px;
+    letter-spacing: -0.0025em;
+}
+.admin-dashboard-terminal-body-infowrapper-articles > div{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.admin-dashboard-terminal-body-infowrapper-articles > div > img{
+    width:54px;
+    height: 54px;
+}
+
+
+.admin-dashboard-terminal-body-infowrapper-events{
+    grid-area: events;
+    display: flex;
+    border-radius: 15px;
+    padding: 20px;
+    flex-direction: column;
+    background-color: white;
+}
+.admin-dashboard-terminal-body-infowrapper-events > div{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.admin-dashboard-terminal-body-infowrapper-events > div > img{
+    width: 54px;
+    height: 54px;
+}
+.admin-dashboard-terminal-body-infowrapper-events > p:nth-child(2){
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 57px;
+    line-height: 64px;
+    letter-spacing: -0.0025em;
+
+}
+
+
+.admin-dashboard-terminal-body-infowrapper-reports{
+    grid-area: reports;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+}
+.admin-dashboard-terminal-body-infowrapper-reports > div{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.admin-dashboard-terminal-body-infowrapper-reports > div > img{
+    width: 54px;
+    height: 54px;
+}
+.admin-dashboard-terminal-body-infowrapper-reports > p{
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.001em;
+    color: #00838F;
+}
+
+.admin-dashboard-terminal-body-studentslist{
+    padding:20px;
+}
+.admin-dashboard-terminal-body-studentslist-header{
+    display: flex;
+    padding-bottom:20px;
+    justify-content: space-between;
+}
+.admin-dashboard-terminal-body-studentslist-header > img{
+    width: 7px;
+    height: 16px;
+}
+.admin-dashboard-terminal-body-studentslist-body{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.admin-dashboard-terminal-body-studentslist-body-user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.admin-dashboard-terminal-body-studentslist-body-user > img{
+    width: 20px;
+    height: 20px;
+}
+
+
+.admin-dashboard-terminal-body-react{
+    padding:20px;
+}
+
+
+.admin-dashboard-terminal-body-reports-header{
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+}
+.admin-dashboard-terminal-body-reports-header > img{
+    width: 7px;
+    height: 16px;
+}

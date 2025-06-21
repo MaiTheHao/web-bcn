@@ -38,7 +38,7 @@ function Projectcard({ id, thumbnail, projectName, projectDes, numberStar, numbe
 							{startDate} - {finishDate}
 						</p>
 					</div>
-					<Link to={`${id}`}>
+					<Link to={`/projects/${id}`}>
 						<p>MORE</p>
 						<img src='/MoreButton/moreButton.png' alt='' />
 					</Link>

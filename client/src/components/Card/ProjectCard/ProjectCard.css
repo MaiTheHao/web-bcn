@@ -1,5 +1,5 @@
 #project-card {
-	aspect-ratio: 562 / 244;
+	aspect-ratio: 562 / 212;
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -48,6 +48,10 @@
 	height: 24px;
 }
 
+#project-card .project-card__content-upper > h1{
+	text-align: end;
+}
+
 #project-card .project-card__content-upper-react {
 	display: flex;
 	gap: 15.42px;
@@ -63,6 +67,7 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
+	text-align: left;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }

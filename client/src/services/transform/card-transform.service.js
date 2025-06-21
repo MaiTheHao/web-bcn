@@ -7,7 +7,7 @@ export function transformUserToMemberCard(user) {
 	if (!user) return null;
 	return {
 		id: user._id,
-		avatar: user.profile?.avt || '',
+		avt: user.profile?.avt || '',
 		role: user.role || '',
 		name: user.profile?.name || '',
 		jobTitle: user.profile?.job || '',
