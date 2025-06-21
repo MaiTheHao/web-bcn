@@ -1,7 +1,6 @@
 [
 	{
 		"_id": "60d0fe4f5311236168a109ca",
-		"user_id": 1,
 		"username": "phan_luan",
 		"email": "phanluan@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
@@ -12,7 +11,7 @@
 			"status": "Sinh viên năm nhất",
 			"bio": "Passionate mobile app developer with experience in React Native and Flutter."
 		},
-		"role": "MEMBER",
+		"role": "member",
 		"statistics": {
 			"star": 999,
 			"view": 999,
@@ -22,10 +21,9 @@
 		"projects": ["60d0fe4f5311236168a109d0", "60d0fe4f5311236168a109d2", "60d0fe4f5311236168a109d4"],
 		"created_at": "2023-01-01T00:00:00Z",
 		"updated_at": "2024-03-15T00:00:00Z"
-	},	
+	},
 	{
 		"_id": "60d0fe4f5311236168a109cb",
-		"user_id": 2,
 		"username": "minhvu",
 		"email": "nguyenminhvu@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
@@ -36,7 +34,7 @@
 			"status": "Sinh viên năm nhất",
 			"bio": "Developing innovative mobile applications with a focus on user experience."
 		},
-		"role": "MEMBER",
+		"role": "member",
 		"statistics": {
 			"star": 999,
 			"view": 999,
@@ -49,7 +47,6 @@
 	},
 	{
 		"_id": "60d0fe4f5311236168a109cc",
-		"user_id": 3,
 		"username": "honganh",
 		"email": "honganh@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
@@ -60,7 +57,7 @@
 			"status": "Sinh viên năm nhất",
 			"bio": "Creative developer with a strong background in UI design."
 		},
-		"role": "MEMBER",
+		"role": "member",
 		"statistics": {
 			"star": 999,
 			"view": 999,
@@ -73,7 +70,6 @@
 	},
 	{
 		"_id": "60d0fe4f5311236168a109cd",
-		"user_id": 4,
 		"username": "trunghau",
 		"email": "nguyentrunghau@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
@@ -84,7 +80,7 @@
 			"status": "Sinh viên năm nhất",
 			"bio": "Detail-oriented developer focusing on creating seamless mobile experiences."
 		},
-		"role": "MEMBER",
+		"role": "member",
 		"statistics": {
 			"star": 999,
 			"view": 999,
@@ -97,7 +93,6 @@
 	},
 	{
 		"_id": "60d0fe4f5311236168a109ce",
-		"user_id": 5,
 		"username": "vannam",
 		"email": "tranvannam@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
@@ -108,7 +103,7 @@
 			"status": "Sinh viên năm nhất",
 			"bio": "Full-stack developer with a passion for mobile app development."
 		},
-		"role": "MEMBER",
+		"role": "member",
 		"statistics": {
 			"star": 999,
 			"view": 999,
@@ -118,5 +113,367 @@
 		"projects": ["60d0fe4f5311236168a109d0"],
 		"created_at": "2023-01-20T00:00:00Z",
 		"updated_at": "2024-03-10T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109cf",
+		"username": "thanhdat",
+		"email": "lethanhdat@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/lethanhdat.png",
+			"name": "Lê Thành Đạt",
+			"job": "Backend Developer",
+			"status": "Sinh viên năm hai",
+			"bio": "Backend developer specializing in Node.js and MongoDB."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 850,
+			"view": 750,
+			"project_count": 2
+		},
+		"technologies": ["nodejs", "mongodb", "express", "js"],
+		"projects": ["60d0fe4f5311236168a109da", "60d0fe4f5311236168a109db"],
+		"created_at": "2023-04-12T00:00:00Z",
+		"updated_at": "2024-03-20T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d0",
+		"username": "hoainam",
+		"email": "nguyenhoainam@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/nguyenhoainam.png",
+			"name": "Nguyễn Hoài Nam",
+			"job": "Frontend Developer",
+			"status": "Sinh viên năm nhất",
+			"bio": "Frontend enthusiast with expertise in React and Vue.js."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 720,
+			"view": 680,
+			"project_count": 4
+		},
+		"technologies": ["react", "vue", "html", "css", "js"],
+		"projects": ["60d0fe4f5311236168a109dc", "60d0fe4f5311236168a109dd", "60d0fe4f5311236168a109de", "60d0fe4f5311236168a109df"],
+		"created_at": "2023-05-08T00:00:00Z",
+		"updated_at": "2024-03-25T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d1",
+		"username": "mylai",
+		"email": "phammylai@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/phammylai.png",
+			"name": "Phạm Mỹ Lai",
+			"job": "UI/UX Designer",
+			"status": "Sinh viên năm ba",
+			"bio": "Creative UI/UX designer with a passion for user-centered design."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 950,
+			"view": 890,
+			"project_count": 5
+		},
+		"technologies": ["figma", "adobe-xd", "photoshop", "html", "css"],
+		"projects": ["60d0fe4f5311236168a109e0", "60d0fe4f5311236168a109e1", "60d0fe4f5311236168a109e2", "60d0fe4f5311236168a109e3", "60d0fe4f5311236168a109e4"],
+		"created_at": "2023-06-15T00:00:00Z",
+		"updated_at": "2024-03-30T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d2",
+		"username": "ducminh",
+		"email": "nguyenducminh@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/nguyenducminh.png",
+			"name": "Nguyễn Đức Minh",
+			"job": "Full Stack Developer",
+			"status": "Sinh viên năm tư",
+			"bio": "Experienced full stack developer working with modern web technologies."
+		},
+		"role": "ADMIN",
+		"statistics": {
+			"star": 1200,
+			"view": 1150,
+			"project_count": 8
+		},
+		"technologies": ["react", "nodejs", "python", "django", "postgresql"],
+		"projects": [
+			"60d0fe4f5311236168a109e5",
+			"60d0fe4f5311236168a109e6",
+			"60d0fe4f5311236168a109e7",
+			"60d0fe4f5311236168a109e8",
+			"60d0fe4f5311236168a109e9",
+			"60d0fe4f5311236168a109ea",
+			"60d0fe4f5311236168a109eb",
+			"60d0fe4f5311236168a109ec"
+		],
+		"created_at": "2022-08-20T00:00:00Z",
+		"updated_at": "2024-04-01T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d3",
+		"username": "thuytrang",
+		"email": "lethuytrang@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/lethuytrang.png",
+			"name": "Lê Thùy Trang",
+			"job": "Data Analyst",
+			"status": "Sinh viên năm ba",
+			"bio": "Data analyst with expertise in Python and machine learning."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 680,
+			"view": 620,
+			"project_count": 3
+		},
+		"technologies": ["python", "pandas", "numpy", "sql", "tableau"],
+		"projects": ["60d0fe4f5311236168a109ed", "60d0fe4f5311236168a109ee", "60d0fe4f5311236168a109ef"],
+		"created_at": "2023-07-10T00:00:00Z",
+		"updated_at": "2024-03-18T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d4",
+		"username": "quanghuy",
+		"email": "tranguanghuy@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/tranguanghuy.png",
+			"name": "Trần Quang Huy",
+			"job": "DevOps Engineer",
+			"status": "Sinh viên năm năm",
+			"bio": "DevOps engineer specializing in cloud infrastructure and automation."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 780,
+			"view": 720,
+			"project_count": 2
+		},
+		"technologies": ["docker", "kubernetes", "aws", "terraform", "jenkins"],
+		"projects": ["60d0fe4f5311236168a109f0", "60d0fe4f5311236168a109f1"],
+		"created_at": "2022-09-25T00:00:00Z",
+		"updated_at": "2024-03-22T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d5",
+		"username": "anhtu",
+		"email": "leanhtu@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/leanhtu.png",
+			"name": "Lê Anh Tú",
+			"job": "Game Developer",
+			"status": "Sinh viên năm hai",
+			"bio": "Passionate game developer working with Unity and C#."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 820,
+			"view": 760,
+			"project_count": 6
+		},
+		"technologies": ["csharp", "unity", "blender", "photoshop"],
+		"projects": ["60d0fe4f5311236168a109f2", "60d0fe4f5311236168a109f3", "60d0fe4f5311236168a109f4", "60d0fe4f5311236168a109f5", "60d0fe4f5311236168a109f6", "60d0fe4f5311236168a109f7"],
+		"created_at": "2023-08-18T00:00:00Z",
+		"updated_at": "2024-03-28T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d6",
+		"username": "thanhhuyen",
+		"email": "vuothanhhuyen@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/vuothanhhuyen.png",
+			"name": "Vũ Thành Huyền",
+			"job": "Cybersecurity Specialist",
+			"status": "Sinh viên năm tư",
+			"bio": "Cybersecurity specialist focused on web application security."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 690,
+			"view": 650,
+			"project_count": 4
+		},
+		"technologies": ["python", "kali-linux", "wireshark", "metasploit"],
+		"projects": ["60d0fe4f5311236168a109f8", "60d0fe4f5311236168a109f9", "60d0fe4f5311236168a109fa", "60d0fe4f5311236168a109fb"],
+		"created_at": "2022-10-12T00:00:00Z",
+		"updated_at": "2024-03-26T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d7",
+		"username": "duykhang",
+		"email": "phamduykhang@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/phamduykhang.png",
+			"name": "Phạm Duy Khang",
+			"job": "AI/ML Engineer",
+			"status": "Sinh viên năm năm",
+			"bio": "AI/ML engineer working on computer vision and natural language processing."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 1100,
+			"view": 980,
+			"project_count": 7
+		},
+		"technologies": ["python", "tensorflow", "pytorch", "opencv", "scikit-learn"],
+		"projects": [
+			"60d0fe4f5311236168a109fc",
+			"60d0fe4f5311236168a109fd",
+			"60d0fe4f5311236168a109fe",
+			"60d0fe4f5311236168a109ff",
+			"60d0fe4f5311236168a10a00",
+			"60d0fe4f5311236168a10a01",
+			"60d0fe4f5311236168a10a02"
+		],
+		"created_at": "2022-11-30T00:00:00Z",
+		"updated_at": "2024-04-02T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d8",
+		"username": "kimthu",
+		"email": "nguyenkimthu@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/nguyenkimthu.png",
+			"name": "Nguyễn Kim Thư",
+			"job": "Quality Assurance Engineer",
+			"status": "Sinh viên năm ba",
+			"bio": "QA engineer with expertise in automated testing and quality processes."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 640,
+			"view": 580,
+			"project_count": 3
+		},
+		"technologies": ["selenium", "postman", "jira", "testng", "java"],
+		"projects": ["60d0fe4f5311236168a10a03", "60d0fe4f5311236168a10a04", "60d0fe4f5311236168a10a05"],
+		"created_at": "2023-09-22T00:00:00Z",
+		"updated_at": "2024-03-24T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109d9",
+		"username": "vanlong",
+		"email": "hoangvanlong@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/hoangvanlong.png",
+			"name": "Hoàng Văn Long",
+			"job": "Blockchain Developer",
+			"status": "Sinh viên năm tư",
+			"bio": "Blockchain developer working with Ethereum and smart contracts."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 870,
+			"view": 810,
+			"project_count": 5
+		},
+		"technologies": ["solidity", "web3", "ethereum", "react", "nodejs"],
+		"projects": ["60d0fe4f5311236168a10a06", "60d0fe4f5311236168a10a07", "60d0fe4f5311236168a10a08", "60d0fe4f5311236168a10a09", "60d0fe4f5311236168a10a0a"],
+		"created_at": "2022-12-15T00:00:00Z",
+		"updated_at": "2024-03-29T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109da",
+		"username": "thanhthao",
+		"email": "buithanhthao@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/buithanhthao.png",
+			"name": "Bùi Thanh Thảo",
+			"job": "Product Manager",
+			"status": "Sinh viên năm năm",
+			"bio": "Product manager with strong technical background and UX focus."
+		},
+		"role": "MODERATOR",
+		"statistics": {
+			"star": 920,
+			"view": 860,
+			"project_count": 4
+		},
+		"technologies": ["figma", "jira", "confluence", "analytics"],
+		"projects": ["60d0fe4f5311236168a10a0b", "60d0fe4f5311236168a10a0c", "60d0fe4f5311236168a10a0d", "60d0fe4f5311236168a10a0e"],
+		"created_at": "2022-07-08T00:00:00Z",
+		"updated_at": "2024-04-03T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109db",
+		"username": "minhduc",
+		"email": "leeminhduc@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/leeminhduc.png",
+			"name": "Lê Minh Đức",
+			"job": "Systems Administrator",
+			"status": "Sinh viên năm tư",
+			"bio": "Systems administrator specializing in Linux servers and network management."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 710,
+			"view": 670,
+			"project_count": 2
+		},
+		"technologies": ["linux", "bash", "nginx", "mysql", "monitoring"],
+		"projects": ["60d0fe4f5311236168a10a0f", "60d0fe4f5311236168a10a10"],
+		"created_at": "2023-01-28T00:00:00Z",
+		"updated_at": "2024-03-31T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109dc",
+		"username": "hoaiphuong",
+		"email": "tranhoaiphuong@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/tranhoaiphuong.png",
+			"name": "Trần Hoài Phương",
+			"job": "Technical Writer",
+			"status": "Sinh viên năm ba",
+			"bio": "Technical writer creating documentation and tutorials for developers."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 590,
+			"view": 540,
+			"project_count": 6
+		},
+		"technologies": ["markdown", "gitbook", "confluence", "html"],
+		"projects": ["60d0fe4f5311236168a10a11", "60d0fe4f5311236168a10a12", "60d0fe4f5311236168a10a13", "60d0fe4f5311236168a10a14", "60d0fe4f5311236168a10a15", "60d0fe4f5311236168a10a16"],
+		"created_at": "2023-10-05T00:00:00Z",
+		"updated_at": "2024-03-27T00:00:00Z"
+	},
+	{
+		"_id": "60d0fe4f5311236168a109dd",
+		"username": "dinhtuan",
+		"email": "vudinhtuan@example.com",
+		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
+		"profile": {
+			"avt": "/public/Members/vudinhtuan.png",
+			"name": "Vũ Đình Tuấn",
+			"job": "Database Administrator",
+			"status": "Sinh viên năm năm",
+			"bio": "Database administrator with expertise in SQL Server and Oracle."
+		},
+		"role": "member",
+		"statistics": {
+			"star": 750,
+			"view": 690,
+			"project_count": 3
+		},
+		"technologies": ["sql-server", "oracle", "mysql", "postgresql", "redis"],
+		"projects": ["60d0fe4f5311236168a10a17", "60d0fe4f5311236168a10a18", "60d0fe4f5311236168a10a19"],
+		"created_at": "2022-06-20T00:00:00Z",
+		"updated_at": "2024-04-04T00:00:00Z"
 	}
 ]
