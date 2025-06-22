@@ -1,16 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './MemberDetail.css';
-import Projectcard from '../../components/ProjectCard/ProjectCard';
+import Projectcard from '../../components/ProjectCard/ProjectCard.jsx';
+import { getMemberDetail } from './getMemberDetail';
 
 function MemberDetail() {
+  // Dùng hàm có sẵn để lấy data, không fetch, không import JSON
   const [member, setMember] = useState(null);
   const projectListRef = useRef(null);
 
   useEffect(() => {
-    fetch('/MemberDetail.json')
-      .then((res) => res.json())
-      .then((data) => setMember(data))
-      .catch(() => setMember(null));
+    setMember(getMemberDetail());
   }, []);
 
   if (!member) return <div>Loading...</div>;
