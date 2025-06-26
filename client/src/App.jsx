@@ -1,16 +1,18 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
+import Home from './pages/Home/Home'
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import Projects from './pages/Projects/Projects';
 import Members from './pages/Members/Members';
 import DataProjectDetail from '../mock_datas/project_detail_page_mock_data.json';
-
+import Header from './components/AppHeader/AppHeader';
+import Footer from './components/AppFooter/AppFooter'
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<AppLayout />}>
-					<Route index element={<h1>Home</h1>} />
+					<Route index element = {<Home/>}/>
 					<Route path='/projects' element={<Projects />} />
 					<Route
 						path='/project/:id'
