@@ -8,6 +8,7 @@ import MemberDetail from './pages/MemberDetail/MemberDetail';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
 import AppBody from './components/AppBody/AppBody';
+import AboutPage from './pages/AboutPage/AboutPage.jsx';
 
 function App() {
 	useEffect(() => {
@@ -23,34 +24,17 @@ function App() {
 			<Routes>
 				<Route path='/' element={<AppLayout />}>
 					<Route index element={<h1>Home</h1>} />
+					<Route path='/about' element={<AboutPage />} />
 					<Route path='/projects' element={<Projects />} />
 					<Route path='/projects/:id' element={<ProjectDetail />} />
 					<Route path='members' element={<Members />} />
 					<Route path='members/:id' element={<MemberDetail />} />
-					
-					{/* <Route
-						path='/project/:id'
-						element={
-							<div>
-								<ProjectDetail projects={DataProjectDetail} />
-							</div>
-						}
-					/>
-					<Route
-						path='/member/:id'
-						element={
-							<div>
-								<MemberDetail />
-							</div>
-						}
-						/>
-					
-					<Route path='*' element={<div>404 Not Found</div>} /> */}
 				</Route>
+
 
 				{/* Logic điều hướng tới trang Admin Dashboard */}
 				<Route path='/admindashboard' element={<AppLayout
-					AdminDashboard={<AdminDashboard 
+					content={<AdminDashboard 
 						adminName="Nguyễn Hùng"
 						numberStudentsParticipate={1.474}
 						events={1}
