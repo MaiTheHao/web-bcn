@@ -25,7 +25,7 @@ function MemberCard({ avt, role, id, name, jobTitle, status, starCount, viewCoun
 					<p>Công nghệ thành thạo</p>
 					<div className='member-card__tech-list'>
 						{technologies.map((tech) => {
-							return <img key={tech.id} src={technologiesMapped?.[tech.name]} alt='tech' />;
+							return <img key={tech.id} src={technologiesMapped?.[tech]} alt='tech' />;
 						})}
 					</div>
 				</div>

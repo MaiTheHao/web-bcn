@@ -1,10 +1,19 @@
 import './ItemTable.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { calcPagination } from '../../styles/utils/getPagination';
+import DropDownIcon from '/svg/DropDown.svg';
+import SearchIcon from '/svg/Search.svg';
+import Select from '../Select/Select';
 
-function ItemTable({ title = 'Project', items = [], itemsPerRow = 2, rowsPerPage = 2 }) {
+function ItemTable({
+	title,
+	items,
+	itemsPerRow = 2,
+	rowsPerPage = 2,
+	filterFields = []
+}) {
 	const LIMIT = itemsPerRow * rowsPerPage;
 	const [page, setPage] = useState(1);
 
@@ -44,34 +53,76 @@ function ItemTable({ title = 'Project', items = [], itemsPerRow = 2, rowsPerPage
 
 	const pageNumbers = getPageNumbers();
 
+	const [filterCriteria, setFilterCriteria] = useState([]);
+	const handle = (fieldName, value) => {
+		const newFilterState = filterCriteria.filter((c) => c.fieldName !== fieldName);
+		newFilterState.push({ fieldName, value });
+		setFilterCriteria(newFilterState);
+	};
+
+
+
 	return (
-		<div className='item-table'>
-			<h1 className='item-table__title'>{title}</h1>
-			<div className='item-table__body'>
-				<ul className='item-table__list'>
+		<div className="item-table">
+			<h1 className="item-table-title">{title}</h1>
+			<div className="item-table-filter-container">
+				{filterFields.map((field, idx) => (
+					<div className="item-table-filter-item" key={field.fieldName}>
+						<Select
+							options={field.options}
+							placeholder={field.placeholder}
+							onSelect={(value) => handle(field.fieldName, value)}
+							selectedValue={filterCriteria.find(f => f.fieldName === field.fieldName)?.value || null}
+							customClassName={{ select: 'select-filter-item', trigger: 'item-table-select' }}
+						/>
+					</div>
+				))}
+				<div className="item-table-filter-item">
+					<img src={SearchIcon} alt="Search Icon" className="item-table-search-icon" />
+					<input type="text" className="item-table-search-input" placeholder="Nhập từ khóa cần tìm kiếm" />
+				</div>
+			</div>
+			<div className="item-table-cart">
+				<ul className="item-table-list" style={{ display: 'flex', flexWrap: 'wrap' }}>
 					{currentItems.map((item, index) => (
-						<li className='item-table__list-item' key={index} style={{ flex: `1 0 calc((100% - 20px * ${itemsPerRow - 1}) / ${itemsPerRow})` }}>
+						<li
+							className="item-table-card"
+							key={index}
+							style={{ width: `calc( (100% - ${20 * (itemsPerRow - 1)}px) / ${itemsPerRow})` }}
+						>
 							{item}
 						</li>
 					))}
 				</ul>
 				{pagination.totalPage > 1 && (
-					<div className='pagination'>
-						<button className='pagination-button pagination-button-prev' onClick={handlePrevPage} disabled={page === 1}>
+					<div className="item-table-pagination">
+						<button
+							className="item-table-pagination-button item-table-pagination-button-prev"
+							onClick={handlePrevPage}
+							disabled={page === 1}
+						>
 							<FontAwesomeIcon icon={faAnglesLeft} />
 						</button>
 						{pageNumbers.map((p, idx) =>
 							p === '...' ? (
-								<span className='pagination-dots' key={idx}>
+								<span className="item-table-pagination-dots" key={idx}>
 									...
 								</span>
 							) : (
-								<button key={p} className={`pagination-button pagination-number ${isActivePage(p)}`} onClick={() => handleChangePage(p)}>
+								<button
+									key={p}
+									className={`item-table-pagination-button item-table-pagination-number ${isActivePage(p)}`}
+									onClick={() => handleChangePage(p)}
+								>
 									{p}
 								</button>
 							)
 						)}
-						<button className='pagination-button pagination-button-next' onClick={handleNextPage} disabled={page === pagination.totalPage}>
+						<button
+							className="item-table-pagination-button item-table-pagination-button-next"
+							onClick={handleNextPage}
+							disabled={page === pagination.totalPage}
+						>
 							<FontAwesomeIcon icon={faAnglesRight} />
 						</button>
 					</div>

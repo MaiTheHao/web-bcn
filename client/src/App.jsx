@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
+import Home from './pages/Home/Home'
 import Projects from './pages/Projects/Projects';
 import Members from './pages/Members/Members';
 import { useEffect } from 'react';
@@ -9,6 +10,9 @@ import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
 import AppBody from './components/AppBody/AppBody';
 import AboutPage from './pages/AboutPage/AboutPage.jsx';
+import Header from './components/AppHeader/AppHeader';
+import Footer from './components/AppFooter/AppFooter'
+// import DataProjectDetail from '../mock_datas/project_detail_page_mock_data.json';
 
 function App() {
 	useEffect(() => {
@@ -23,12 +27,12 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<AppLayout />}>
-					<Route index element={<h1>Home</h1>} />
+					<Route index element = {<Home/>}/>
 					<Route path='/about' element={<AboutPage />} />
 					<Route path='/projects' element={<Projects />} />
 					<Route path='/projects/:id' element={<ProjectDetail />} />
-					<Route path='members' element={<Members />} />
-					<Route path='members/:id' element={<MemberDetail />} />
+					<Route path='/members' element={<Members />} />
+					<Route path='/members/:id' element={<MemberDetail />} />
 				</Route>
 
 

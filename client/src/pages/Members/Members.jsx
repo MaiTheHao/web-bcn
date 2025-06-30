@@ -3,44 +3,55 @@ import ItemTable from '../../components/ItemTable/ItemTable.jsx';
 import MemberCard from '../../components/Card/MemberCard/MemberCard.jsx';
 import { getAllUsers } from '../../services/api';
 import { transformUserToMemberCard } from '../../services/transform';
+import membersData from '../../../mock_datas/users_collection.data.json';
 
 function Members() {
-	const [members, setMembers] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
-
-	useEffect(() => {
-		const fetchMembers = async () => {
-			try {
-				setLoading(true);
-				const usersData = await getAllUsers(); // trả về All Data Users từ mock API 
-				const transformedMembers = usersData.map(transformUserToMemberCard).filter(Boolean); // Biến user data -> members array -> lọc các giá trị null 
-				setMembers(transformedMembers);
-			} catch (err) {
-				setError(err.message);
-			} finally {
-				setLoading(false);
-			}
-		};
-
-		fetchMembers();
-	}, []);
-
-	if (loading) return <div>Tải thành viên...</div>;
-	if (error) return <div>Lỗi khi tải thành viên: {error}</div>;
-	
-	const memberCards = members.map((member) => (
-		<MemberCard
-			key={member.id}
-			{
-				...member
-			}
-		/>
-	));
-
-	const cols = 2;
-	const rows = 2;
-	return <ItemTable title='THÀNH VIÊN' items={memberCards} itemsPerRow={cols} rowsPerPage={rows} />;
+    const memberCards = membersData.map((member) => (
+        <MemberCard
+            key={member._id}
+            avt={member.profile.avt}
+            role={member.role}
+            id={member._id}
+            name={member.profile.name}
+            job={member.profile.job}
+            status={member.profile.status}
+            starCount={member.statistics.star}
+            viewCount={member.statistics.view}
+            projectCount={member.projects.length}
+            technologies={member.technologies}
+        />
+    ));
+    const filterFields = [
+      {
+      fieldName: 'skill',
+      placeholder: 'Chọn kỹ năng',
+      options: [
+        { label: 'Lập trình', value: 'Lập trình' },
+        { label: 'Thiết kế', value: 'Thiết kế' },
+        { label: 'Quản lý dự án', value: 'Quản lý dự án' },
+        { label: 'Phát triển web', value: 'Phát triển web' },
+      ]
+      },
+      {
+      fieldName: 'specialization',
+      placeholder: 'Chọn chuyên môn',
+      options: [
+        { label: 'Kinh nghiệm', value: 'Kinh nghiệm' },
+        { label: 'Thời gian', value: 'Thời gian' },
+        { label: 'Độ phổ biến', value: 'Độ phổ biến' },
+        { label: 'Độ khó', value: 'Độ khó' },
+      ]
+      }
+    ];
+    const cols = 2;
+    const rows = 2;
+    return <ItemTable
+        title='THÀNH VIÊN'
+        items={memberCards}
+        itemsPerRow={cols}
+        rowsPerPage={rows}
+        filterFields={filterFields}
+    />;
 }
 
 export default Members;
