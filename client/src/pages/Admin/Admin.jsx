@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { getAllUsers } from '../../services/api/user-api.service';
-import './AdminDashboard.css';
+import './Admin.css';
 import avatar from '/Members/nguyenminhvu.png';
-import ControlButtonIcon from '/AdminDashboard/ControlButton/controlbutton.png';
-import HomepageIcon from '/AdminDashboard/Homepage/homepage.png';
-import PersonIcon from '/AdminDashboard/Person/person.png';
-import UserIcon from '/AdminDashboard/User/user.png';
-import ArticleAndReportIcon from '/AdminDashboard/ArticlesAndReports/articlesandreports.png';
-import EventsIcon from '/AdminDashboard/Events/events.png';
-import ArrowIcon from '/AdminDashboard/ArrowIcon/arrowicon.png';
+import ControlButtonIcon from '/pages-img/AdminDashboard/ControlButton/controlbutton.png';
+import HomepageIcon from '/pages-img/AdminDashboard/Homepage/homepage.png';
+import PersonIcon from '/pages-img/AdminDashboard/Person/person.png';
+import UserIcon from '/pages-img/AdminDashboard/User/user.png';
+import ArticleAndReportIcon from '/pages-img/AdminDashboard/ArticlesAndReports/articlesandreports.png';
+import EventsIcon from '/pages-img/AdminDashboard/Events/events.png';
+import ArrowIcon from '/pages-img/AdminDashboard/ArrowIcon/arrowicon.png';
 import { roles } from '../../consts/roles';
+import { Link } from 'react-router-dom';
 
 // Phần này ông nên sử dụng param thay vì truyền từ Route vào qua props
 // Tham khảo trang MEMBER DETAIL phần đầu tiên á
@@ -141,10 +142,10 @@ function AdminDashboard({ adminName, numberStudentsParticipate, events, articles
 							) : (
 								listStudents.map((student) => {
 									return (
-										<div className='admin-dashboard-terminal-body-studentslist-body-user' key={student.id}>
+										<Link to={`/members/${student.id}`} className='admin-dashboard-terminal-body-studentslist-body-user' key={student.id}>
 											<img src={student.avt} alt='user' />
 											<p>{student.name}</p>
-										</div>
+										</Link>
 									);
 								})
 							)}

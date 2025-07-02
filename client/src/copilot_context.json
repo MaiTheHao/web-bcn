@@ -1,8 +1,10 @@
 {
-	"title": "Web BCN - Frontend Developer Context",
-	"version": "1.0.0",
-	"lastUpdated": "2024-05-01",
+	"title": "Web BCN - Frontend Developer Copilot Context",
+	"lastUpdated": "21:00 02/07/2025",
+	"creator": "Mai Thế Hào",
 	"dataModels": {
+		"description": "Các schema dữ liệu chính của ứng dụng, bao gồm người dùng và dự án",
+		"notes": "Các schema này được sử dụng để định nghĩa cấu trúc dữ liệu trong MongoDB và các API endpoints",
 		"users": {
 			"description": "Schema thông tin người dùng/thành viên",
 			"schema": {
@@ -61,54 +63,71 @@
 		}
 	},
 	"apiIntegration": {
-		"description": "Cấu trúc tích hợp API endpoints trong ứng dụng (hiện đang sử dụng mock data)",
-		"mockImplementation": {
-			"description": "Hiện tại ứng dụng đang sử dụng mock data từ JSON files vì server chưa sẵn sàng",
-			"mockDataLocations": {
-				"users": "/mock_datas/users_collection.data.json",
-				"projects": "/mock_datas/projects_collection.data.json"
-			},
-			"transitionPlan": "Khi backend sẵn sàng, chỉ cần thay đổi base_url trong các service files mà không cần thay đổi logic xử lý"
+		"description": "Tích hợp API services để làm việc với dữ liệu người dùng và dự án",
+		"importMethod": {
+			"description": "Tất cả API functions được export từ services/api/index.js để dễ dàng import",
+			"syntax": "import { functionName } from 'services/api';",
+			"example": "import { getAllUsers, getProjectById } from 'services/api';"
 		},
 		"availableServices": {
-			"users": {
-				"getAllUsers": "Lấy tất cả người dùng từ mock data",
-				"getUserById": "Lấy người dùng theo ID từ mock data",
-				"getUserByEmail": "Lấy người dùng theo email từ mock data",
-				"getUsersWithPagination": "Lấy danh sách người dùng với phân trang (page, limit)"
+			"userServices": {
+				"getAllUsers": {
+					"description": "Lấy tất cả người dùng",
+					"params": "Không có",
+					"returns": "Promise<Array> - Danh sách tất cả người dùng",
+					"example": "const users = await getAllUsers();"
+				},
+				"getUserById": {
+					"description": "Lấy thông tin người dùng theo ID",
+					"params": "id: string - ID của người dùng",
+					"returns": "Promise<Object|null> - Đối tượng người dùng hoặc null",
+					"example": "const user = await getUserById('user123');"
+				},
+				"getUserByEmail": {
+					"description": "Lấy thông tin người dùng theo email",
+					"params": "email: string - Email của người dùng",
+					"returns": "Promise<Object|null> - Đối tượng người dùng hoặc null",
+					"example": "const user = await getUserByEmail('user@example.com');"
+				},
+				"getUsersWithPagination": {
+					"description": "Lấy danh sách người dùng với phân trang",
+					"params": "page: number, limit: number",
+					"returns": "Promise<{users: Array, pagination: Object}>",
+					"example": "const { users, pagination } = await getUsersWithPagination(1, 10);"
+				}
 			},
-			"projects": {
-				"getAllProjects": "Lấy tất cả dự án từ mock data",
-				"getProjectById": "Lấy dự án theo ID từ mock data",
-				"getProjectsByUserId": "Lấy danh sách dự án theo thành viên",
-				"getProjectsWithPagination": "Lấy danh sách dự án với phân trang (page, limit)"
+			"projectServices": {
+				"getAllProjects": {
+					"description": "Lấy tất cả dự án",
+					"params": "Không có",
+					"returns": "Promise<Array> - Danh sách tất cả dự án",
+					"example": "const projects = await getAllProjects();"
+				},
+				"getProjectById": {
+					"description": "Lấy thông tin dự án theo ID",
+					"params": "id: string - ID của dự án",
+					"returns": "Promise<Object|null> - Đối tượng dự án hoặc null",
+					"example": "const project = await getProjectById('project123');"
+				},
+				"getProjectsByUserId": {
+					"description": "Lấy danh sách dự án theo thành viên",
+					"params": "userId: string - ID của người dùng",
+					"returns": "Promise<Array> - Danh sách dự án có userId trong team_members",
+					"example": "const userProjects = await getProjectsByUserId('user123');"
+				},
+				"getProjectsWithPagination": {
+					"description": "Lấy danh sách dự án với phân trang",
+					"params": "page: number, limit: number",
+					"returns": "Promise<{projects: Array, pagination: Object}>",
+					"example": "const { projects, pagination } = await getProjectsWithPagination(1, 10);"
+				}
 			}
 		},
-		"endpointStructure": {
-			"users": {
-				"getAllUsers": "GET /api/users - Lấy tất cả người dùng",
-				"getUserById": "GET /api/users/:id - Lấy người dùng theo ID",
-				"getUserByEmail": "GET /api/users?email=:email - Lấy người dùng theo email",
-				"getUsersWithPagination": "GET /api/users?page=:page&limit=:limit - Lấy người dùng với phân trang",
-				"createUser": "POST /api/users - Tạo người dùng mới",
-				"updateUser": "PUT /api/users/:id - Cập nhật thông tin người dùng",
-				"deleteUser": "DELETE /api/users/:id - Xóa người dùng"
-			},
-			"projects": {
-				"getAllProjects": "GET /api/projects - Lấy tất cả dự án",
-				"getProjectById": "GET /api/projects/:id - Lấy dự án theo ID",
-				"getProjectsByUserId": "GET /api/projects?userId=:userId - Lấy dự án theo user ID",
-				"getProjectsWithPagination": "GET /api/projects?page=:page&limit=:limit - Lấy dự án với phân trang",
-				"createProject": "POST /api/projects - Tạo dự án mới",
-				"updateProject": "PUT /api/projects/:id - Cập nhật thông tin dự án",
-				"deleteProject": "DELETE /api/projects/:id - Xóa dự án"
-			}
+		"errorHandling": {
+			"recommendation": "Luôn sử dụng try/catch khi gọi API functions",
+			"example": "try {\n  const users = await getAllUsers();\n  // xử lý dữ liệu\n} catch (error) {\n  console.error('Lỗi khi lấy dữ liệu:', error);\n}"
 		},
-		"usage": {
-			"howToUse": "Import từ services/api và gọi async/await",
-			"example": "const userData = await getUserById(id);"
-		},
-		"notes": "Tất cả các API calls đều trả về Promises và nên được xử lý với try/catch. Hiện tại đang sử dụng mock data, các chức năng thêm/sửa/xóa chưa được triển khai."
+		"notes": "Hiện tại sử dụng mock data từ JSON files. Developer chỉ cần import và sử dụng các functions mà không cần quan tâm đến implementation bên trong."
 	},
 	"dataTransformation": {
 		"description": "Chuyển đổi dữ liệu từ API thành props cho components",
@@ -151,128 +170,64 @@
 		},
 		"notes": "Các hàm transform trả về null nếu dữ liệu đầu vào không hợp lệ"
 	},
-	"paginationUtils": {
-		"description": "Các utility functions để phân trang dữ liệu",
-		"functions": {
-			"calculatePagination": {
-				"description": "Tính toán cấu hình phân trang",
-				"params": {
-					"totalItems": "Tổng số mục trong danh sách",
-					"itemsPerPage": "Số mục trên mỗi trang",
-					"currentPage": "Trang hiện tại (bắt đầu từ 1)"
-				},
-				"returns": {
-					"totalItems": "Tổng số mục",
-					"itemsPerPage": "Số mục trên mỗi trang",
-					"currentPage": "Trang hiện tại",
-					"totalPage": "Tổng số trang",
-					"startIndex": "Chỉ số bắt đầu của mục trên trang hiện tại",
-					"endIndex": "Chỉ số kết thúc của mục trên trang hiện tại"
-				}
-			},
-			"paginate": {
-				"description": "Chia một mảng thành các trang",
-				"params": {
-					"items": "Mảng các mục cần phân trang",
-					"itemsPerPage": "Số mục trên mỗi trang",
-					"currentPage": "Trang hiện tại (bắt đầu từ 1)"
-				},
-				"returns": {
-					"items": "Mảng các mục trên trang hiện tại",
-					"pagination": "Đối tượng cấu hình phân trang"
-				}
-			}
-		},
-		"usage": {
-			"example1": "import { paginate } from '../utils/pagination.util';",
-			"example2": "const { items: currentPageItems, pagination } = paginate(allMembers, 10, currentPage);"
-		},
-		"notes": "Sử dụng với ItemTable component để hiển thị phân trang"
-	},
-	"componentsUsage": {
-		"itemTable": {
-			"description": "Component hiển thị danh sách các items theo grid layout với phân trang",
-			"props": {
-				"title": "String - Tiêu đề cho bảng",
-				"items": "Array - Danh sách các item components để hiển thị",
-				"itemsPerRow": "Number - Số items trên mỗi hàng (default: 2)",
-				"rowsPerPage": "Number - Số hàng trên mỗi trang (default: 3)"
-			},
-			"example": "<ItemTable title='THÀNH VIÊN' items={memberCards} itemsPerRow={2} rowsPerPage={2} />"
-		},
-		"memberCard": {
-			"description": "Component hiển thị thông tin thành viên",
-			"props": {
-				"id": "String/Number - ID của thành viên",
-				"avt": "String - Đường dẫn đến avatar",
-				"role": "String - Vai trò (MEMBER, LEADER)",
-				"name": "String - Tên thành viên",
-				"job": "String - Chức danh công việc",
-				"status": "String - Trạng thái",
-				"numberStars": "Number - Số sao đánh giá",
-				"numberView": "Number - Số lượt xem",
-				"projects": "Number - Số dự án tham gia",
-				"technologies": "Array - Danh sách công nghệ"
-			}
-		},
-		"projectCard": {
-			"description": "Component hiển thị thông tin dự án",
-			"props": {
-				"id": "String/Number - ID của dự án",
-				"thumbnail": "String - Đường dẫn đến ảnh thumbnail",
-				"projectName": "String - Tên dự án",
-				"projectDes": "String - Mô tả dự án",
-				"numberStar": "Number - Số sao đánh giá",
-				"numberView": "Number - Số lượt xem",
-				"startDate": "String - Ngày bắt đầu",
-				"finishDate": "String - Ngày kết thúc",
-				"technologies": "Array - Danh sách công nghệ sử dụng"
-			}
-		}
-	},
-	"workflowExamples": {
-		"loadingMembers": {
-			"description": "Quy trình để tải và hiển thị danh sách thành viên",
-			"steps": [
-				"Import getAllUsers từ services/api",
-				"Import transformUserToMemberCard từ services/transform",
-				"Gọi getAllUsers() trong useEffect",
-				"Map kết quả qua transformUserToMemberCard",
-				"Render danh sách với ItemTable component"
-			],
-			"codeExample": "const [members, setMembers] = useState([]);\nconst [loading, setLoading] = useState(true);\n\nuseEffect(() => {\n  const fetchMembers = async () => {\n    try {\n      setLoading(true);\n      const usersData = await getAllUsers();\n      const transformedMembers = usersData.map(transformUserToMemberCard).filter(Boolean);\n      setMembers(transformedMembers);\n    } catch (err) {\n      console.error(err);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  fetchMembers();\n}, []);"
-		},
-		"loadingSingleMember": {
-			"description": "Quy trình để tải và hiển thị chi tiết một thành viên",
-			"steps": ["Import getUserById từ services/api", "Lấy id từ URL params", "Gọi getUserById(id) trong useEffect", "Render thông tin thành viên và danh sách dự án của họ"],
-			"codeExample": "const { id } = useParams();\nconst [member, setMember] = useState(null);\n\nuseEffect(() => {\n  const fetchMember = async () => {\n    try {\n      const data = await getUserById(id);\n      setMember(data);\n    } catch (error) {\n      console.error('Lỗi khi lấy dữ liệu thành viên:', error);\n    }\n  };\n\n  fetchMember();\n}, [id]);"
-		}
-	},
 	"technologiesMapped": {
 		"description": "Mapping của tên công nghệ đến icon tương ứng",
 		"notes": "Được định nghĩa trong src/consts/technologiesMapped.js",
 		"usage": "import { technologiesMapped } from '../../consts/technologiesMapped';",
 		"example": "{technologiesMapped[tech] ? <img src={technologiesMapped[tech]} alt={tech} /> : <span>{tech}</span>}"
 	},
-	"commonIssues": {
-		"referenceErrors": {
-			"problem": "Lỗi khi reference giữa users và projects không đúng",
-			"solution": "Đảm bảo ID trong projects.team_members và users.projects tồn tại trong collections tương ứng"
+	"developers": [
+		{
+			"name": "Mai Thế Hào",
+			"nickname": "Neo Adrian",
+			"role": "Fullstack Developer, Administrator"
 		},
-		"missingTechnologies": {
-			"problem": "Icon công nghệ không hiển thị",
-			"solution": "Kiểm tra tên công nghệ trong data có khớp với keys trong technologiesMapped không"
+		{
+			"name": "Nguyễn Mai Minh Quý",
+			"nickname": "wrxdie",
+			"role": "Frontend Developer"
+		},
+		{
+			"name": "Nguyễn Minh Vũ",
+			"nickname": "takiin",
+			"role": "Frontend Developer"
+		},
+		{
+			"name": "Nguyễn Hoàng",
+			"nickname": "hoangriji",
+			"role": "Frontend Developer"
 		}
+	],
+	"latestCheckReport": {
+		"description": "Thông tin báo cáo về các vấn đề của lần kiểm tra gần nhất",
+		"checkedAt": "21:00 02/07/2025",
+		"issues": [
+			{
+				"description": "Trang HOME phần FOOTER đang bị tôi comment lại vì lỗi hiển thị, cần chỉnh sửa lại để hiển thị đúng.",
+				"recommendedDev": "wrxdie",
+				"solution": "Sửa lại style css cho hợp lí là ok."
+			},
+			{
+				"description": "Phần style của trang Admin hiện tại bị rời rạc, nhiều class CSS đặt tên chưa nhất quán, chưa tận dụng tốt tính kế thừa (inheritance) của CSS. Một số block như 'Danh sách sinh viên' phải thêm display: flex và overflow-y: auto mới hiển thị đúng, trong khi các block khác lại dùng layout khác nhau, gây khó bảo trì.",
+				"recommendedDev": "hoangriji",
+				"solution": "Nên chuẩn hóa lại kiến trúc CSS cho trang Admin: Đặt tên class theo BEM hoặc convention rõ ràng, gom các thuộc tính chung vào class cha để kế thừa, sử dụng biến màu sắc và font chung, đảm bảo các block layout thống nhất (ví dụ: tất cả các card đều dùng flex hoặc grid, padding/margin đồng nhất). Đặc biệt, nên kiểm tra lại các block như 'Danh sách sinh viên', 'Bài viết', 'Sự kiện' để dùng chung một base style cho card hoặc section."
+			},
+			{
+				"description": "Phần style của ITEM TABLE, phần show các item bị lỗi style phần khoảng cách giữa các item, truy cập vào path /members để xem rõ hơn.",
+				"recommendedDev": "takiin",
+				"solution": "Cần kiểm tra lại các thuộc tính margin/padding/gap và công thức tính toán phân chia của các item trong ITEM TABLE để đảm bảo khoảng cách giữa các item là đồng nhất cả 2 chiều ngang và dọc."
+			}
+		],
+		"changesMade": [
+			"Thay đổi path tới public trong các file comp, đồng thời cập nhật các đường dẫn trong public và comp lại theo phân loại pages-img",
+			"Xóa bớt các phần thông tin trong file copilot_context.json để clean hơn và các thông tin không cần thiết",
+			"Thêm các thông tin về các developer vào copilot_context.json để cho copilot dễ dàng hiểu được ai là người đang làm việc trên dự án này"
+		],
+		"notes": ""
 	},
-	"developmentGuides": {
-		"addingNewMember": {
-			"steps": ["Thêm object mới vào users_collection.data.json", "Đảm bảo có đủ các trường theo schema", "Cập nhật các reference projects nếu cần"]
-		},
-		"addingNewProject": {
-			"steps": ["Thêm object mới vào projects_collection.data.json", "Đảm bảo có đủ các trường theo schema", "Cập nhật các reference team_members nếu cần"]
-		},
-		"extendingPagination": {
-			"steps": ["Import { calculatePagination, paginate } từ utils/pagination.util.js", "Áp dụng paginate() cho mảng dữ liệu", "Sử dụng kết quả pagination để hiển thị UI phân trang"]
-		}
-	}
+	"specialRequiredFieldForCopilot": [
+		"Luôn hỏi danh tính dựa vào mục developers, dưới dạng list cho người dùng chọn",
+		"Chỉ trả lời các câu hỏi liên quan đến phát triển phần mềm, code, hoặc dự án Web BCN.",
+		"Trả lời ngắn gọn, súc tích, tập trung vào giải pháp kỹ thuật."
+	]
 }
