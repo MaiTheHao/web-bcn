@@ -6,6 +6,7 @@
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
+	gap:20px;
 	padding: 0 var(--size-32px);
 }
 
@@ -14,8 +15,20 @@
 	display: flex;
 }
 
+.app-block > svg:nth-child(3){
+	display: none;
+}
+
 .logo {
 	aspect-ratio: 195 / 40;
+}
+
+.global-search > svg{
+	margin: 0;
+	padding: 0;
+	display: none;
+	width: 16px;
+	height: 24px;
 }
 
 .global-search-container {
@@ -24,8 +37,37 @@
 	justify-content: flex-end;
 }
 
+/* Tablet */
+@media (min-width: 300px) and (max-width: 1010px) {
+	.global-search-wrapper{
+		display: none;
+	}
+	.global-search{
+		border: none;
+		width: max-content;
+	}
+	.global-search > svg{
+		display: inline-block;
+	}
+	.global-search-container{
+		width: 24px;
+		flex: 0;
+	}
+}
+/* Mobile */
+@media (min-width: 300px) and (max-width: 760px){
+	.app-block > svg:nth-child(3){
+		display: inline-block;
+	}
+	#app-header-block{
+		padding: 0 15px;
+		gap:15px;
+	}
+}
+
 /*
  Chỉnh sửa lại style tinh gọn - clean hơn
  Thêm class container bao bọc để style chính xác - cấu trúc hơn
  Căn chỉnh phần tử
 */
+

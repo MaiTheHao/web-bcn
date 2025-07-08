@@ -1,4 +1,5 @@
 import React from 'react';
+import './AppBody.css'
 
 function AppBody({ children }) {
 	return (

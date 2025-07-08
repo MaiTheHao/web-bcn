@@ -1,0 +1,15 @@
+.app-container{
+    padding: 0 32px;
+}
+/* Tablet */
+@media (min-width:500px) and (max-width: 1040px) {
+    .app-container{
+        padding: 0 15px;
+    }
+}
+/* Mobile */
+@media (min-width: 300px) and (max-width: 500px) {
+    .app-container{
+        padding: 0 10px;
+    }
+}

@@ -23,3 +23,15 @@ body {
 .app-body {
 	max-width: var(--app-body-max-width);
 }
+/* Tablet */
+@media (min-width: 725px) and (max-width: 1010px) {
+	html{
+		font-size: 14px;
+	}
+}
+/* Mobile */
+@media (min-width:300px) and (max-width: 724px) {
+	html{
+		font-size: 12px;
+	}
+}

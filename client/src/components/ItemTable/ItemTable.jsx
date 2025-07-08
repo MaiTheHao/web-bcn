@@ -77,18 +77,21 @@ function ItemTable({
 						/>
 					</div>
 				))}
-				<div className="item-table-filter-item">
+				<img src={SearchIcon} alt="Search Icon"/>
+				<div className="item-table-filter-item-search">
 					<img src={SearchIcon} alt="Search Icon" className="item-table-search-icon" />
 					<input type="text" className="item-table-search-input" placeholder="Nhập từ khóa cần tìm kiếm" />
 				</div>
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00838f">
+					<path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z"/>
+				</svg>
 			</div>
 			<div className="item-table-cart">
-				<ul className="item-table-list" style={{ display: 'flex', flexWrap: 'wrap' }}>
+				<ul className="item-table-list">
 					{currentItems.map((item, index) => (
 						<li
 							className="item-table-card"
 							key={index}
-							style={{ width: `calc( (100% - ${20 * (itemsPerRow - 1)}px) / ${itemsPerRow})` }}
 						>
 							{item}
 						</li>

@@ -46,6 +46,10 @@ function GlobalSearch() {
           onClick={handleSearch}
         />
       </div>
+      <FontAwesomeIcon
+          icon={faMagnifyingGlass}
+          className="search-icon-left"
+      />
     </div>
   );
 }

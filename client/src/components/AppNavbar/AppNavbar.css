@@ -21,3 +21,9 @@
 .navbar-menu li a.active {
 	color: var(--base-palette-cyan-800);
 }
+/* Mobile */
+@media (min-width: 280px) and (max-width: 760px){
+	.navbar-menu{
+		display: none;
+	}
+}
