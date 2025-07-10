@@ -1,18 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
 import Home from './pages/Home/Home';
-import Projects from './pages/Projects/Projects';
+import Projects from './pages/Projects/Projects.jsx';
 import Members from './pages/Members/Members';
 import { useEffect } from 'react';
 import { getAllUsers } from './services/api/user-api.service';
 import MemberDetail from './pages/MemberDetail/MemberDetail';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import AdminDashboard from './pages/Admin/Admin.jsx';
-import AppBody from './components/AppBody/AppBody';
 import About from './pages/About/About.jsx';
-import Header from './components/AppHeader/AppHeader';
-import Footer from './components/AppFooter/AppFooter';
-// import DataProjectDetail from '../mock_datas/project_detail_page_mock_data.json';
 
 function App() {
 	useEffect(() => {

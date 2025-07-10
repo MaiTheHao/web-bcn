@@ -2,6 +2,8 @@ import React from 'react';
 import Logo from '/svg/Logo.svg';
 import Navbar from '../AppNavbar/AppNavbar.jsx';
 import Searchbar from '../GlobalSearch/GlobalSearch.jsx';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
+import { SignIn, SignUp } from '@clerk/clerk-react';
 import './AppHeader.css';
 
 function AppHeader() {
@@ -18,6 +20,12 @@ function AppHeader() {
 				<div className='global-search-container'>
 					<Searchbar />
 				</div>
+				<SignedOut>
+					<SignInButton />
+				</SignedOut>
+				<SignedIn>
+					<UserButton/>
+				</SignedIn>
 			</div>
 		</header>
 	);

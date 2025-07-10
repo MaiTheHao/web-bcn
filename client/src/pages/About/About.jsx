@@ -18,10 +18,10 @@ function About() {
 				<a href='#'>Đăng ký thành viên</a>
 			</div>
 			<div className='about-page-leftcontent'>
-				<img src={Robot} alt='' width='339px' height='389px' />
-				<img src={BCN1} alt='' width='542px' height='362px' />
-				<img src={BCN2} alt='' width='393px' height='295px' />
-				<img src={BCN3} alt='' width='442px' height='322px' />
+				<img src={Robot} alt=''/>
+				<img src={BCN1} alt='' />
+				<img src={BCN2} alt='' />
+				<img src={BCN3} alt='' />
 				<img src={BCN1} alt='' width='282px' height='159px' />
 			</div>
 		</div>

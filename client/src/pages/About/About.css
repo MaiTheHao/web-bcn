@@ -68,20 +68,28 @@
     right: -10%;
     top:57px;
     z-index: 1;
+    width: 339px;
+    height: 389px;
 }
 .about-page-leftcontent > img:nth-child(2){
     position: absolute;
+    width: 542px;
+    height: 362px;
     top:118px;
     z-index: 2;
 }
 .about-page-leftcontent > img:nth-child(3){
     position: absolute;
+    width: 393px;
+    height: 295px;
     top: 372px;
     right: -13%;
     z-index: 1;
 }
 .about-page-leftcontent > img:nth-child(4){
     position: absolute;
+    width: 442px;
+    height: 322px;
     top:440px;
     left:45px;
     z-index: 0;
@@ -90,5 +98,11 @@
     position: absolute;
     top: 520px;
     left: -225px;
+    width: 282px;
+    height: 159px;
 }
 
+/* Tablet */
+@media (min-width: 900px ) and ( max-width: 1345p) {
+    
+}
