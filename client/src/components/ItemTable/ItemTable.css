@@ -54,6 +54,7 @@
 
 .item-table-list {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   gap: 20px;
@@ -106,6 +107,17 @@
 
 .item-table-filter-container > svg{
   display: none;
+}
+.item-table-filter-container > button{
+  padding: 5px 10px;
+  background-color: #00838f;
+  color: white;
+  text-transform:capitalize;
+  border-radius: 15px;
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.0025em;
 }
 
 

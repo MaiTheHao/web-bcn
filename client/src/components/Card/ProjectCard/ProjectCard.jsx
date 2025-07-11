@@ -27,7 +27,7 @@ function Projectcard({ id, thumbnail, projectName, projectDes, numberStar, numbe
 
 				<div className='project-card__content-tech'>
 					{technologies.map((tech) => (
-						<img key={tech.id} src={technologiesMapped?.[tech]} alt='tech' />
+						<img key={tech.id} src={technologiesMapped?.[tech.name]} alt='tech' />
 					))}
 				</div>
 

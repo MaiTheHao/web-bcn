@@ -112,7 +112,7 @@
 #project-card .project-card__content-footer > div {
 	align-items: center;
 	display: flex;
-	gap: 20px;
+	gap: 10px;
 }
 #project-card .project-card__content-footer > div > img {
 	width: 14px;

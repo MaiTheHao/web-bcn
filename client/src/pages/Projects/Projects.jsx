@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import ItemTable from '../../components/ItemTable/ItemTable';
 import ProjectCard from '../../components/Card/ProjectCard/ProjectCard';
-import sampleProjects from '../../../mock_datas/projects_collection.data.json';
+import { getAllProjects } from '../../services/api/project-api.service';
+import { transformProjectToProjectCard } from '../../services/transform';
 
 function Projects() {
-  const projectCards = sampleProjects.map((project) => (
-    <ProjectCard
-      key={project.id}
-      thumbnail={project.thumbnail}
-      projectName={project.name}
-      projectDes={project.description}
-      numberStar={project.statistics.stars}
-      numberView={project.statistics.views}
-      startDate={project.dates.start}
-      finishDate={project.dates.finish}
-      technologies={project.technologies}
-    />
-  ));
+  const [projectCardData, setProjectCardData] = useState([]);
+
+  useEffect(() => {
+    const projectCards = getAllProjects()
+      .then((projects) => {
+        let transformedProjectCards = projects.map((project) => {
+          return transformProjectToProjectCard(project);
+        })
+        let cards = transformedProjectCards.map((project) => {
+          return (
+            <ProjectCard 
+              {...project}
+            />
+          )
+        })
+        setProjectCardData(cards);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }, []);
+
+
+
   const filterFields = [
     {
       fieldName: 'projectType',
@@ -56,10 +68,11 @@ function Projects() {
   return (
     <ItemTable
       title="Our Projects"
-      items={projectCards}
+      items={projectCardData}
       itemsPerRow={cols}
       rowsPerPage={rows}
       filterFields={filterFields}
+      switchPage={'members'}
     />
   );
 }

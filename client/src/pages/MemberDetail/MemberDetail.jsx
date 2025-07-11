@@ -35,6 +35,7 @@ function MemberDetail() {
 
 	useEffect(() => {
 		const fetchProjects = async () => {
+			// nếu chưa có member projects 
 			if (!member || !Array.isArray(member.projects) || member.projects.length === 0) {
 				setProjects([]);
 				return;

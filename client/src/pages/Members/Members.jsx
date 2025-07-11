@@ -46,11 +46,13 @@ function Members() {
     const cols = 2;
     const rows = 2;
     return <ItemTable
+
         title='THÀNH VIÊN'
         items={memberCards}
         itemsPerRow={cols}
         rowsPerPage={rows}
         filterFields={filterFields}
+        switchPage={'projects'}
     />;
 }
 

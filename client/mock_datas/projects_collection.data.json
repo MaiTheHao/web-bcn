@@ -13,7 +13,7 @@
 			"stars": 42,
 			"views": 1250
 		},
-		"technologies": ["html", "css", "js", "react"],
+		"technologies": ["html","css","js","react"],
 		"repository": {
 			"github": "https://github.com/bcn-team/ecommerce-website",
 			"demo": "https://ecommerce-demo.bcn.com"

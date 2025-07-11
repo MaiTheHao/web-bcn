@@ -14,7 +14,6 @@ function App() {
 	useEffect(() => {
 		const fakeFetch = async () => {
 			const data = await getAllUsers();
-			console.log(data);
 		};
 
 		fakeFetch();
