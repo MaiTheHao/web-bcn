@@ -51,6 +51,7 @@ function Select({
         setSelectedOption(selectedValue);
     }, [selectedValue]);
 
+    // tìm option được chọn
     const selectedLabel =
         selectedOption !== null
             ? displayOptions.find((opt) => opt.value === selectedOption)?.label

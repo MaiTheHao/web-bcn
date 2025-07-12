@@ -4,6 +4,7 @@ import './ProjectDetail.css';
 import { technologiesMapped } from '../../consts/technologiesMapped';
 import { getProjectById } from '../../services/api/project-api.service';
 import { getUserById } from '../../services/api/user-api.service';
+import { Link } from 'react-router-dom';
 import { transformUserToMemberCard } from '../../services/transform/card-transform.service';
 
 function ProjectDetail() {
@@ -47,6 +48,7 @@ function ProjectDetail() {
 						return transformUserToMemberCard(userData);
 					})
 				);
+				console.log(transformedMembers);
 				setTeamMembers(transformedMembers.filter(Boolean));
 			} catch (error) {
 				console.error('Lỗi khi lấy dữ liệu thành viên:', error);
@@ -121,15 +123,17 @@ function ProjectDetail() {
 							<div>Đang tải thông tin thành viên...</div>
 						) : teamMembers.length > 0 ? (
 							teamMembers.map((member) => (
-								<div key={member.id} className='project-detail__team-member'>
-									<div className='project-detail__team-member-avatar'>
-										{member.avatar ? <img src={member.avatar} alt={member.name} /> : <div className='project-detail__team-member-avatar-placeholder' />}
+								<Link to={`/members/${member.id}`}>
+									<div key={member.id} className='project-detail__team-member'>
+										<div className='project-detail__team-member-avatar'>
+												{member.avt ? <img src={member.avt} alt={member.name} /> : <div className='project-detail__team-member-avatar-placeholder' />}
+											</div>
+											<div className='project-detail__team-member-info'>
+												<div className='project-detail__team-member-name'>{member.name}</div>
+												<div className='project-detail__team-member-role'>{member.role}</div>
+										</div>
 									</div>
-									<div className='project-detail__team-member-info'>
-										<div className='project-detail__team-member-name'>{member.name}</div>
-										<div className='project-detail__team-member-role'>{member.role}</div>
-									</div>
-								</div>
+								</Link>
 							))
 						) : (
 							<div>Không có thông tin thành viên</div>

@@ -3,26 +3,43 @@ import ItemTable from '../../components/ItemTable/ItemTable.jsx';
 import MemberCard from '../../components/Card/MemberCard/MemberCard.jsx';
 import { getAllUsers } from '../../services/api';
 import { transformUserToMemberCard } from '../../services/transform';
-import membersData from '../../../mock_datas/users_collection.data.json';
 
 function Members() {
-    const memberCards = membersData.map((member) => (
-        <MemberCard
-            key={member._id}
-            avt={member.profile.avt}
-            role={member.role}
-            id={member._id}
-            name={member.profile.name}
-            job={member.profile.job}
-            status={member.profile.status}
-            starCount={member.statistics.star}
-            viewCount={member.statistics.view}
-            projectCount={member.projects.length}
-            technologies={member.technologies}
-        />
-    ));
-    const filterFields = [
-      {
+  const [userCardsData, setUserCardsData] = useState([]);
+  useEffect(() => {
+    // update props cho member card
+    getAllUsers()
+      .then((userData) => {
+        const transformUserCards = userData.map((user) => {
+          return transformUserToMemberCard(user);
+        })
+        
+        const memberCards = transformUserCards.map((userCard) => {
+          return (
+            <MemberCard
+              key={userCard.id}
+              avt={userCard.avt}
+              role={userCard.role}
+              id={userCard.id}
+              name={userCard.name}
+              jobTitle={userCard.jobTitle}
+              status={userCard.status}
+              starCount={userCard.starCount}
+              viewCount={userCard.viewCount}
+              projectCount={userCard.projectCount}
+              technologies={userCard.technologies}
+            />
+          ) 
+        })
+        setUserCardsData(memberCards.filter(Boolean));
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }, [])
+
+  const filterFields = [
+    {
       fieldName: 'skill',
       placeholder: 'Chọn kỹ năng',
       options: [
@@ -31,8 +48,8 @@ function Members() {
         { label: 'Quản lý dự án', value: 'Quản lý dự án' },
         { label: 'Phát triển web', value: 'Phát triển web' },
       ]
-      },
-      {
+    },
+    {
       fieldName: 'specialization',
       placeholder: 'Chọn chuyên môn',
       options: [
@@ -41,19 +58,19 @@ function Members() {
         { label: 'Độ phổ biến', value: 'Độ phổ biến' },
         { label: 'Độ khó', value: 'Độ khó' },
       ]
-      }
-    ];
-    const cols = 2;
-    const rows = 2;
-    return <ItemTable
+    }
+  ];
+  const cols = 2;
+  const rows = 2;
+  return <ItemTable
 
-        title='THÀNH VIÊN'
-        items={memberCards}
-        itemsPerRow={cols}
-        rowsPerPage={rows}
-        filterFields={filterFields}
-        switchPage={'projects'}
-    />;
+    title='THÀNH VIÊN'
+    items={userCardsData}
+    itemsPerRow={cols}
+    rowsPerPage={rows}
+    filterFields={filterFields}
+    switchPage={'projects'}
+  />;
 }
 
 export default Members;

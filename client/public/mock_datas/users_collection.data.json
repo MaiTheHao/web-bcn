@@ -97,7 +97,7 @@
 		"email": "tranvannam@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
 		"profile": {
-			"avt": "/Members/student5.png",
+			"avt": "/Members/nguyentrunghau.png",
 			"name": "Trần Văn Nam",
 			"job": "Mobile App Developer",
 			"status": "Sinh viên năm nhất",
@@ -120,7 +120,7 @@
 		"email": "lethanhdat@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
 		"profile": {
-			"avt": "/Members/lethanhdat.png",
+			"avt": "/Members/nguyentrunghau.png",
 			"name": "Lê Thành Đạt",
 			"job": "Backend Developer",
 			"status": "Sinh viên năm hai",
@@ -143,7 +143,7 @@
 		"email": "nguyenhoainam@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
 		"profile": {
-			"avt": "/Members/nguyenhoainam.png",
+			"avt": "/Members/nguyentrunghau.png",
 			"name": "Nguyễn Hoài Nam",
 			"job": "Frontend Developer",
 			"status": "Sinh viên năm nhất",
@@ -166,7 +166,7 @@
 		"email": "phammylai@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
 		"profile": {
-			"avt": "/Members/phammylai.png",
+			"avt": "/Members/nguyentrunghau.png",
 			"name": "Phạm Mỹ Lai",
 			"job": "UI/UX Designer",
 			"status": "Sinh viên năm ba",
@@ -189,7 +189,7 @@
 		"email": "nguyenducminh@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
 		"profile": {
-			"avt": "/Members/nguyenducminh.png",
+			"avt": "/Members/nguyentrunghau.png",
 			"name": "Nguyễn Đức Minh",
 			"job": "Full Stack Developer",
 			"status": "Sinh viên năm tư",

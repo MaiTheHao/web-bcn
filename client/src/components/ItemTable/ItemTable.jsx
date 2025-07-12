@@ -5,7 +5,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { calcPagination } from '../../styles/utils/getPagination';
 import DropDownIcon from '/svg/DropDown.svg';
 import { Link } from 'react-router-dom';
-import SearchIcon from '/svg/Search.svg';
+import GlobalSearch from '../GlobalSearch/GlobalSearch.jsx';
 import Select from '../Select/Select';
 
 function ItemTable({
@@ -16,6 +16,8 @@ function ItemTable({
 	filterFields = [],
 	switchPage
 }) {
+
+	// Logic phân trang
 	const LIMIT = itemsPerRow * rowsPerPage;
 	const [page, setPage] = useState(1);
 
@@ -55,6 +57,7 @@ function ItemTable({
 
 	const pageNumbers = getPageNumbers();
 
+	// Logic filter
 	const [filterCriteria, setFilterCriteria] = useState([]);
 	const handle = (fieldName, value) => {
 		const newFilterState = filterCriteria.filter((c) => c.fieldName !== fieldName);
@@ -79,15 +82,15 @@ function ItemTable({
 						/>
 					</div>
 				))}
-				<img src={SearchIcon} alt="Search Icon"/>
-				<div className="item-table-filter-item-search">
-					<img src={SearchIcon} alt="Search Icon" className="item-table-search-icon" />
-					<input type="text" className="item-table-search-input" placeholder="Nhập từ khóa cần tìm kiếm" />
-				</div>	
+				
+				<GlobalSearch />
+
 				<button><Link to={`/${switchPage}`} >{switchPage}</Link></button>
+
 				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00838f">
 					<path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z"/>
 				</svg>
+
 			</div>
 			<div className="item-table-cart">
 				<ul className="item-table-list">

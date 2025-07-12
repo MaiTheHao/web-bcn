@@ -8,7 +8,7 @@ function Projects() {
   const [projectCardData, setProjectCardData] = useState([]);
 
   useEffect(() => {
-    const projectCards = getAllProjects()
+    getAllProjects()
       .then((projects) => {
         let transformedProjectCards = projects.map((project) => {
           return transformProjectToProjectCard(project);
