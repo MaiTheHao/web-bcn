@@ -30,7 +30,7 @@
 		"profile": {
 			"avt": "/Members/nguyenminhvu.png",
 			"name": "Nguyễn Minh Vũ",
-			"job": "Mobile App Developer",
+			"job": "Full Stack Developer",
 			"status": "Sinh viên năm nhất",
 			"bio": "Developing innovative mobile applications with a focus on user experience."
 		},
@@ -98,8 +98,8 @@
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
 		"profile": {
 			"avt": "/Members/nguyentrunghau.png",
-			"name": "Trần Văn Nam",
-			"job": "Mobile App Developer",
+			"name": "Nguyễn Minh Vũ",
+			"job": "Full Stack Developer",
 			"status": "Sinh viên năm nhất",
 			"bio": "Full-stack developer with a passion for mobile app development."
 		},
@@ -116,13 +116,13 @@
 	},
 	{
 		"_id": "60d0fe4f5311236168a109cf",
-		"username": "thanhdat",
+		"username": "minhquy",
 		"email": "lethanhdat@example.com",
 		"password": "$2a$10$DlYwHfJ6LsDzCRWjKIiqWeWQeQZLZmbXry/Bi/aHXx2zLkoOKF9fS",
 		"profile": {
 			"avt": "/Members/nguyentrunghau.png",
-			"name": "Lê Thành Đạt",
-			"job": "Backend Developer",
+			"name": "Nguyễn Mai Minh Quý",
+			"job": "Front end Developer",
 			"status": "Sinh viên năm hai",
 			"bio": "Backend developer specializing in Node.js and MongoDB."
 		},
@@ -145,7 +145,7 @@
 		"profile": {
 			"avt": "/Members/nguyentrunghau.png",
 			"name": "Nguyễn Hoài Nam",
-			"job": "Frontend Developer",
+			"job": "Front end Developer",
 			"status": "Sinh viên năm nhất",
 			"bio": "Frontend enthusiast with expertise in React and Vue.js."
 		},

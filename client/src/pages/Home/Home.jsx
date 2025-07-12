@@ -1,5 +1,6 @@
 import imgPage1 from '/pages-img/Home/page1/image.webp';
 import imgPage2 from '/pages-img/Home/page2/image.webp';
+import Button from '../../components/Button/Button';
 import './Home.css';
 function Home() {
 	return (
@@ -12,9 +13,10 @@ function Home() {
 							Bạn đang tìm kiếm những giải pháp công nghệ đột phá, sáng tạo và hiệu quả? Chúng tôi luôn sẵn sàng chia sẻ kiến thức, kinh nghiệm và các sản phẩm tiên tiến để giúp bạn nắm
 							bắt xu hướng công nghệ mới nhất.
 						</p>
-						<a href='#' className='home-page__button'>
-							Liên hệ ngay
-						</a>
+						<Button 	
+							className='home-page__button'
+							data={"Liên hệ ngay"}
+						/>
 					</div>
 					<img className='home-page__image' src={imgPage1} alt='' />
 				</div>

@@ -51,36 +51,6 @@
 	margin-block: 40px;
 }
 
-.home-page__button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 157px;
-	height: 40px;
-	background: #00838f;
-	box-shadow: -9px -6px 25px #ffffff, 6px 7px 30px rgba(0, 0, 0, 0.25);
-	backdrop-filter: blur(2px);
-	border-radius: 4px;
-	font-family: 'Quicksand';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 0.001em;
-	color: #ffffff;
-	transition: 0.1s;
-}
-
-.home-page__button:hover {
-	background: #00acc1;
-}
-
-.home-page__button:active {
-	color: #616161;
-	background: #eae9ee;
-	box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.75), inset 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .home-page__image {
 	width: 343px;
 	height: 600px;
