@@ -46,16 +46,17 @@ function Members() {
         { label: 'Lập trình', value: 'Lập trình' },
         { label: 'Thiết kế', value: 'Thiết kế' },
         { label: 'Quản lý dự án', value: 'Quản lý dự án' },
+        { label: 'Phát triển web', value: 'Phát triển web' },
       ]
     },
     {
       fieldName: 'specialization',
       placeholder: 'Chọn chuyên môn',
       options: [
-        { label: 'Web Developer', value: 'Web Developer' },
-        { label: 'Mobile / App Developer', value: 'Mobile / App Developer' },
-        { label: 'UI / UX Designer', value: 'UI / UX Designer' },
-        { label: 'Project Manager', value: 'Project Manager' },
+        { label: 'Kinh nghiệm', value: 'Kinh nghiệm' },
+        { label: 'Thời gian', value: 'Thời gian' },
+        { label: 'Độ phổ biến', value: 'Độ phổ biến' },
+        { label: 'Độ khó', value: 'Độ khó' },
       ]
     }
   ];

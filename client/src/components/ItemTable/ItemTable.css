@@ -122,13 +122,16 @@
 
 
 /* Tablet */
-@media (min-width: 935px) and (max-width: 1010px) {
+@media (min-width: 835px) and (max-width: 1010px) {
+  .item-table-filter-item-search{
+    display: none;
+  }
   .item-table-filter-container > img{
     display: inline-block;
   }
 }
 /* Mobile */
-@media (min-width: 300px) and (max-width: 935px) {
+@media (min-width: 300px) and (max-width: 835px) {
   .item-table-card{
     width: 100%;
   }
